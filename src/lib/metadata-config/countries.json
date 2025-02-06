@@ -1,0 +1,1622 @@
+[
+    {
+        "id": "aDvYMlsjHZi8dumS",
+        "text": "[UNLISTED]"
+    },
+    {
+        "id": "ODyZ8Mr630cCT4ip",
+        "text": "(ICAO)"
+    },
+    {
+        "id": "w8BIxDVQbUM4Iqco",
+        "text": "(WMO)"
+    },
+    {
+        "id": "nyj60hAJTwfHjZa0",
+        "text": "Abu Ail, Jabal at Tair"
+    },
+    {
+        "id": "9h9xCu62h8aUwLl4",
+        "text": "Afghanistan"
+    },
+    {
+        "id": "qehjMG2yspZmrF4D",
+        "text": "Agalega & St Brandon"
+    },
+    {
+        "id": "M40211DdTYINeXLy",
+        "text": "Aland Is"
+    },
+    {
+        "id": "m23Mu7NjSDz0xsMa",
+        "text": "Alaska"
+    },
+    {
+        "id": "jRYx5avxhOg0X4Yg",
+        "text": "Albania"
+    },
+    {
+        "id": "XxPVVT2b4ITeVYpA",
+        "text": "Aldabra"
+    },
+    {
+        "id": "AnddJBDOhqyRKuaW",
+        "text": "Algeria"
+    },
+    {
+        "id": "7UoP4vvjeGMUUP1C",
+        "text": "Am Samoa"
+    },
+    {
+        "id": "RKkdISCvLrvzMxBC",
+        "text": "Amsterdam & St Paul Is"
+    },
+    {
+        "id": "EEIvgV8xqKKvKl3Z",
+        "text": "Andaman & Nicobar Is"
+    },
+    {
+        "id": "GZmvS8foW3YfoRja",
+        "text": "Andorra"
+    },
+    {
+        "id": "5GIBIjwokC8DGipU",
+        "text": "Angola"
+    },
+    {
+        "id": "cPOrvXrBhKIY6rNN",
+        "text": "Anguilla"
+    },
+    {
+        "id": "FLFPzgb2Pooao7Jf",
+        "text": "Annobon Is"
+    },
+    {
+        "id": "th8eCTFZtmBkFr8p",
+        "text": "Antarctica"
+    },
+    {
+        "id": "kyqiX6yLkfSzfGlL",
+        "text": "Antigua, Barbuda"
+    },
+    {
+        "id": "6L1PI5dPjlKmqHmk",
+        "text": "Argentina"
+    },
+    {
+        "id": "O2m5xq3uTdtKrmga",
+        "text": "Armenia"
+    },
+    {
+        "id": "n7EKr0y00mYmVwQV",
+        "text": "Aruba"
+    },
+    {
+        "id": "i0a94ktYeEaLhc81",
+        "text": "Ascension Is"
+    },
+    {
+        "id": "tCvFB8wUnRVUoG27",
+        "text": "Austral Is"
+    },
+    {
+        "id": "kJRLR5L21IebmjIF",
+        "text": "Australia"
+    },
+    {
+        "id": "P1TDFgyThTwnMSO9",
+        "text": "Austria"
+    },
+    {
+        "id": "OafvJBoMezaoyYaY",
+        "text": "Aves Is"
+    },
+    {
+        "id": "2T619t17XXE8FCVc",
+        "text": "Azerbaijan"
+    },
+    {
+        "id": "U0p0IT1nDAS4UyhZ",
+        "text": "Azores"
+    },
+    {
+        "id": "4MInGVtNsu4Dhyev",
+        "text": "Bahamas"
+    },
+    {
+        "id": "NP6p2JnWCH3z8rTI",
+        "text": "Bahrain"
+    },
+    {
+        "id": "36rT1dAltTBjPYZM",
+        "text": "Bajo Nuevo"
+    },
+    {
+        "id": "cjLGPsF1lLV2Z5AK",
+        "text": "Baker & Howland Is"
+    },
+    {
+        "id": "0go24bAngyEjSmtF",
+        "text": "Balearic Is"
+    },
+    {
+        "id": "iLJqh7baRUhVbtaA",
+        "text": "Banaba"
+    },
+    {
+        "id": "IoNiwXj3uML0CNhx",
+        "text": "Bangladesh"
+    },
+    {
+        "id": "2kh9sFH70A5uklv7",
+        "text": "Barbados"
+    },
+    {
+        "id": "8qnq2UqoXV89h0LL",
+        "text": "Belarus"
+    },
+    {
+        "id": "APHQ8kNMO9ZydoFn",
+        "text": "Belgium"
+    },
+    {
+        "id": "bDzk0Pw4s4gYZVJG",
+        "text": "Belize"
+    },
+    {
+        "id": "8JL9LL7LZhLBDDuU",
+        "text": "Benin"
+    },
+    {
+        "id": "VdDHnvIVPebUQkjL",
+        "text": "Bermuda"
+    },
+    {
+        "id": "fFZla7DtKflHBssg",
+        "text": "Bhutan"
+    },
+    {
+        "id": "rdSwfG6Yyz7ywIVc",
+        "text": "Blenheim Reef"
+    },
+    {
+        "id": "nrEdxuP24HlRe2WX",
+        "text": "Bolivia"
+    },
+    {
+        "id": "nB9xEnoRHWSrYOcn",
+        "text": "Bonaire"
+    },
+    {
+        "id": "Q0Fzk3fOR4OH6q4y",
+        "text": "Bosnia-Hercegovina"
+    },
+    {
+        "id": "cUZGdGpUiIQkubPf",
+        "text": "Botswana"
+    },
+    {
+        "id": "MO31ubrBcfvHX1yY",
+        "text": "Bouvet"
+    },
+    {
+        "id": "VdzH2cp47fzIGAIZ",
+        "text": "Br No Borneo"
+    },
+    {
+        "id": "xhhdVdL2NxVzUsaz",
+        "text": "Br Virgin Is"
+    },
+    {
+        "id": "mkTnfyvpF8yQZOFG",
+        "text": "Brazil"
+    },
+    {
+        "id": "hskm3AqXoAkihi42",
+        "text": "British Somaliland"
+    },
+    {
+        "id": "RateegHXSVjE1WxO",
+        "text": "Brunei"
+    },
+    {
+        "id": "3iTwCCOmpVHroSCM",
+        "text": "Bulgaria"
+    },
+    {
+        "id": "iueIdWUBp8eDZByA",
+        "text": "Burkina Faso"
+    },
+    {
+        "id": "I5qFB3UZhQ6NJco4",
+        "text": "Burundi"
+    },
+    {
+        "id": "00rqSD5Q9dC664mt",
+        "text": "Cambodia"
+    },
+    {
+        "id": "GvWLZ7fD6uBM1M21",
+        "text": "Cameroon"
+    },
+    {
+        "id": "l24GuSeSd0cp0gcM",
+        "text": "Canada"
+    },
+    {
+        "id": "geZIMZqXQgpP452P",
+        "text": "Canal Zone"
+    },
+    {
+        "id": "ivs2mk64Of9HFzCx",
+        "text": "Canary Is"
+    },
+    {
+        "id": "Dr9BzSkX8ZpcT2K1",
+        "text": "Cape Verde"
+    },
+    {
+        "id": "McDElrnyNZfLke13",
+        "text": "Cayman Is"
+    },
+    {
+        "id": "Bw5q3E2Ihp3f3427",
+        "text": "Celebe & Molucca Is"
+    },
+    {
+        "id": "DiPJrkfyciJtf2Jx",
+        "text": "Central African Rep"
+    },
+    {
+        "id": "FGIbnDVt0yUi4lhY",
+        "text": "Central Kiribati"
+    },
+    {
+        "id": "fb203MsI8UNDf0zL",
+        "text": "Ceuta & Melilla"
+    },
+    {
+        "id": "SpQWyex4r0fVpR43",
+        "text": "Chad"
+    },
+    {
+        "id": "5EhVM2l1eDudnjsC",
+        "text": "Chagos"
+    },
+    {
+        "id": "CLi41A6RmGrdLwOa",
+        "text": "Chatham Is"
+    },
+    {
+        "id": "9I457kgSlOQPBMwS",
+        "text": "Chesterfield Is"
+    },
+    {
+        "id": "kGg9i3V2xPVa2Opo",
+        "text": "Chile"
+    },
+    {
+        "id": "LWVZ0bp7i0RHjtNf",
+        "text": "China"
+    },
+    {
+        "id": "xYPHvlKciO1Qut6K",
+        "text": "Christmas Is"
+    },
+    {
+        "id": "eqBe6o1uyAVT9nk2",
+        "text": "Clipperton Is"
+    },
+    {
+        "id": "7v5tKe6yBJ3uUbqo",
+        "text": "Cocos Is"
+    },
+    {
+        "id": "nYVn9DbckqaTToEv",
+        "text": "Cocos-Keeling Is"
+    },
+    {
+        "id": "cgzEDQIUtqRBU6ve",
+        "text": "Colombia"
+    },
+    {
+        "id": "Zu9iIqv83JBYzD18",
+        "text": "Comoros"
+    },
+    {
+        "id": "qlaUXypLA70TjwUa",
+        "text": "Comoros"
+    },
+    {
+        "id": "2EXOzmPCrFVd83kK",
+        "text": "Congo"
+    },
+    {
+        "id": "xiG8r5KbxgGsS3Ls",
+        "text": "Conway Reef"
+    },
+    {
+        "id": "R5T3KMjkbX7c7J53",
+        "text": "Corsica"
+    },
+    {
+        "id": "adRb5NfT6bzUijEP",
+        "text": "Costa Rica"
+    },
+    {
+        "id": "bYmH7LP74zfQvAFz",
+        "text": "Crete"
+    },
+    {
+        "id": "87indHfU93BAqWyj",
+        "text": "Croatia"
+    },
+    {
+        "id": "xXj66BODnHqUmeX8",
+        "text": "Crozet"
+    },
+    {
+        "id": "D5yfUJ2mY1lc1hLT",
+        "text": "Cuba"
+    },
+    {
+        "id": "sVW45HxmvMvTIfQi",
+        "text": "Curacao"
+    },
+    {
+        "id": "ojx3bYBAfSjM4gRz",
+        "text": "Cyprus"
+    },
+    {
+        "id": "me5qVSLJMxwM9wuL",
+        "text": "Cyprus SBA"
+    },
+    {
+        "id": "MlT2RpWk0GqV1wk2",
+        "text": "Czech Republic"
+    },
+    {
+        "id": "RF5UHNZRt8YYFYwJ",
+        "text": "Czechoslovakia"
+    },
+    {
+        "id": "RpOrNWqeGUmHGKxg",
+        "text": "Damao, Diu"
+    },
+    {
+        "id": "IlDCRiLKHi3b4NAC",
+        "text": "Dem Rep Congo (Zaire)"
+    },
+    {
+        "id": "czzJd4bMjtrSgLxQ",
+        "text": "Denmark"
+    },
+    {
+        "id": "KWe1m3keaDskLKQs",
+        "text": "Desecheo Is"
+    },
+    {
+        "id": "AZhuP0LWXKeJHUDW",
+        "text": "Desroches"
+    },
+    {
+        "id": "tmIM3PQndG8t2kuq",
+        "text": "Djibouti"
+    },
+    {
+        "id": "MtER3xo8CH3DfFKz",
+        "text": "Dodecanese"
+    },
+    {
+        "id": "O1WX2NSDRu8wzHgK",
+        "text": "Dominica"
+    },
+    {
+        "id": "V93VzscnT38f3tXW",
+        "text": "Dominican Rep"
+    },
+    {
+        "id": "xDYaISBym5OsR1f0",
+        "text": "Ducie Is"
+    },
+    {
+        "id": "X18U74uuj0jn6VDD",
+        "text": "East Germany"
+    },
+    {
+        "id": "WuShR30EWd8OwJrx",
+        "text": "East Kiribati"
+    },
+    {
+        "id": "mycpcNIPre1stB7s",
+        "text": "East Malaysia"
+    },
+    {
+        "id": "d9EkZnYIYY44kcPw",
+        "text": "Easter Is"
+    },
+    {
+        "id": "DSEiVnHT0VXV9mIy",
+        "text": "Ecuador"
+    },
+    {
+        "id": "LBtewL4p8TNnXNFZ",
+        "text": "Egypt"
+    },
+    {
+        "id": "XNTYpof77d9e9fx1",
+        "text": "El Salvador"
+    },
+    {
+        "id": "HYCKFL8Q7toLlOkZ",
+        "text": "England"
+    },
+    {
+        "id": "ZxYdSg7QiPdZqrWd",
+        "text": "Equatorial Guinea"
+    },
+    {
+        "id": "CGER4OcLAKPpRHCS",
+        "text": "Eritrea"
+    },
+    {
+        "id": "oBoAa2aAiZvULonF",
+        "text": "Estonia"
+    },
+    {
+        "id": "C0dK7IKt1O826miJ",
+        "text": "Ethiopia"
+    },
+    {
+        "id": "AW6JqSEjpLQiyTop",
+        "text": "Falkland Is"
+    },
+    {
+        "id": "FYy5N8zRGQXXa57j",
+        "text": "Faroe Is"
+    },
+    {
+        "id": "d9raCH8d1FLwmvfk",
+        "text": "Farquhar"
+    },
+    {
+        "id": "V2lGLYkW4oaLLnan",
+        "text": "Fernando de Noronha"
+    },
+    {
+        "id": "RIF4cvYRjVvyN3Ou",
+        "text": "Fiji"
+    },
+    {
+        "id": "KdkJNYTix8VhcJd1",
+        "text": "Finland"
+    },
+    {
+        "id": "E8Yi6qApHz9gXrA2",
+        "text": "Fr Equatorial Africa"
+    },
+    {
+        "id": "nZRAal0Jbh6eNVyW",
+        "text": "Fr Indo China"
+    },
+    {
+        "id": "UMWgGrfscHJJSgxt",
+        "text": "France"
+    },
+    {
+        "id": "UtXyiyeLAUP5cD5z",
+        "text": "Franz Josef Land"
+    },
+    {
+        "id": "dRROCBAX3UZuA0XH",
+        "text": "French Guiana"
+    },
+    {
+        "id": "OVW4LWSJxOe8UWcr",
+        "text": "French India"
+    },
+    {
+        "id": "FTpjFhpfgRa8Esaj",
+        "text": "French Polynesia"
+    },
+    {
+        "id": "ZWYeigX8odgUxFn7",
+        "text": "French W Africa"
+    },
+    {
+        "id": "fwGnfuBjtlsvUx8x",
+        "text": "Gabon"
+    },
+    {
+        "id": "Ez7ufS8PwJxJk6D6",
+        "text": "Galapagos Is"
+    },
+    {
+        "id": "sQPoHtxxkzTa34rx",
+        "text": "Gambia"
+    },
+    {
+        "id": "tgQqxFfL3TaXsQHK",
+        "text": "Georgia"
+    },
+    {
+        "id": "UqCasiWtCuKCPgkP",
+        "text": "Germany"
+    },
+    {
+        "id": "lzCkPCNjO567P6ym",
+        "text": "Geyser Reef"
+    },
+    {
+        "id": "JjC1hTRB4jmgGgKW",
+        "text": "Ghana"
+    },
+    {
+        "id": "cOZa4s5FWPa1gsVU",
+        "text": "Gibraltar"
+    },
+    {
+        "id": "Bkdn3GbxqiZ6UegQ",
+        "text": "Glorioso Is"
+    },
+    {
+        "id": "kyEqaL8ABPQIRYgB",
+        "text": "Goa"
+    },
+    {
+        "id": "w3XFGMUV4Lf07LVF",
+        "text": "Gold Coast, Togoland"
+    },
+    {
+        "id": "6lmUlegYEOB2I4wF",
+        "text": "Greece"
+    },
+    {
+        "id": "UNhSWYpPstAfyB5C",
+        "text": "Greenland"
+    },
+    {
+        "id": "FD18nIjBtOAF3mJD",
+        "text": "Grenada"
+    },
+    {
+        "id": "PtltkbM4Jba0THyp",
+        "text": "Guadeloupe"
+    },
+    {
+        "id": "nveTMRZ2RfciqYfT",
+        "text": "Guam"
+    },
+    {
+        "id": "8EHFTIZl1T7er9Pj",
+        "text": "Guantanamo Bay"
+    },
+    {
+        "id": "bROytjoEnkHKxpfk",
+        "text": "Guatemala"
+    },
+    {
+        "id": "IBAXprgUPpVlclNH",
+        "text": "Guernsey"
+    },
+    {
+        "id": "jwyfsPZmFGioZvev",
+        "text": "Guinea"
+    },
+    {
+        "id": "UhnNlLRc1mFj0kXd",
+        "text": "Guinea-Bissau"
+    },
+    {
+        "id": "742spIc1o1tw7bjs",
+        "text": "Guyana"
+    },
+    {
+        "id": "z5sVQ3GHcyoAHZQr",
+        "text": "Haiti"
+    },
+    {
+        "id": "58t91L29LQURm9Sm",
+        "text": "Hawaii"
+    },
+    {
+        "id": "FdUxuoZ1MYSj6mhz",
+        "text": "Heard Is"
+    },
+    {
+        "id": "zMFJs21ti9oWxpUP",
+        "text": "Honduras"
+    },
+    {
+        "id": "8V1pJOn4EFssBlZH",
+        "text": "Hong Kong"
+    },
+    {
+        "id": "5FbIToigc6xXO7vy",
+        "text": "Hungary"
+    },
+    {
+        "id": "fgA7jz6eG2gTXXYi",
+        "text": "Iceland"
+    },
+    {
+        "id": "c0ACNRgzcCnNxZv0",
+        "text": "Ifni"
+    },
+    {
+        "id": "xC7g1kS7EcW7F7uE",
+        "text": "India"
+    },
+    {
+        "id": "32dvcVuDOnmA0dq6",
+        "text": "Indonesia"
+    },
+    {
+        "id": "rRZ9xZ9Cf5UCDb1J",
+        "text": "Iran"
+    },
+    {
+        "id": "HbZj20BsDK3lAUi4",
+        "text": "Iraq"
+    },
+    {
+        "id": "uPDgAfKKCxkrnxWW",
+        "text": "Ireland"
+    },
+    {
+        "id": "ZTlLgIzAU9hKypMF",
+        "text": "Isle of Man"
+    },
+    {
+        "id": "HawcbSiCPl83dOpB",
+        "text": "Israel"
+    },
+    {
+        "id": "PjXqXwxhNpAIOOqS",
+        "text": "Ital Somaliland"
+    },
+    {
+        "id": "kBj7HIwAKJA4FWO8",
+        "text": "Italy"
+    },
+    {
+        "id": "0GpXLCnxCJ2jAaqF",
+        "text": "ITU Geneva"
+    },
+    {
+        "id": "W3Lc2lvvIXa9J4TC",
+        "text": "Ivory Coast"
+    },
+    {
+        "id": "nAdqib6IHg7eas6s",
+        "text": "Jamaica"
+    },
+    {
+        "id": "OipmpHJRAmYB8m1o",
+        "text": "Jan Mayen"
+    },
+    {
+        "id": "PT7cr5fCntYFZm50",
+        "text": "Japan"
+    },
+    {
+        "id": "i2JMhBtbD5bp98fB",
+        "text": "Java"
+    },
+    {
+        "id": "OFoVhsTrJ5YXSP4d",
+        "text": "Jersey"
+    },
+    {
+        "id": "38Z8q0Ht9KwbzboK",
+        "text": "Johnston Is"
+    },
+    {
+        "id": "uFtm5dmW7YJyLWSp",
+        "text": "Jordan"
+    },
+    {
+        "id": "V8O9nRqDzqfBusnf",
+        "text": "Juan de Nova, Europa"
+    },
+    {
+        "id": "QdkeSdLzCqirHWyY",
+        "text": "Juan Fernandez"
+    },
+    {
+        "id": "4lHLvi9rJksO17jb",
+        "text": "Kaliningrad"
+    },
+    {
+        "id": "cyeItej8zPlnv4fa",
+        "text": "Kamaran Is"
+    },
+    {
+        "id": "fmemu3cK4twO6Pq2",
+        "text": "Karelo-Finnish Rep"
+    },
+    {
+        "id": "4utilROXkMYREMFh",
+        "text": "Kazakhstan"
+    },
+    {
+        "id": "YGxoHBdSwwkeNdTz",
+        "text": "Kenya"
+    },
+    {
+        "id": "x23gwQbqlX2tGNS1",
+        "text": "Kerguelen Is"
+    },
+    {
+        "id": "vWmALdKJvCRg1pqm",
+        "text": "Kermadec Is"
+    },
+    {
+        "id": "uwvqTcLoCdsV81tr",
+        "text": "Kingman Reef"
+    },
+    {
+        "id": "uhoKd83OatCxU3Of",
+        "text": "Kosovo"
+    },
+    {
+        "id": "GYkQVIr2wEk1Vlmf",
+        "text": "Kure Is"
+    },
+    {
+        "id": "YnrMq7r1yzVPUxu3",
+        "text": "Kuria Muria Is"
+    },
+    {
+        "id": "DfuYepZDEUad8E64",
+        "text": "Kuwait"
+    },
+    {
+        "id": "XRH5xIMT0yGlMxCI",
+        "text": "Kuwait/S Arabia NZ"
+    },
+    {
+        "id": "GNl9HmRC7GDMhgcE",
+        "text": "Kyrgyzstan"
+    },
+    {
+        "id": "xrkcBRxiJE0q4mRI",
+        "text": "Lakshadweep Is"
+    },
+    {
+        "id": "8WBj5cCLcMeqv038",
+        "text": "Laos"
+    },
+    {
+        "id": "h6BuB6dzvcaYWyNK",
+        "text": "Latvia"
+    },
+    {
+        "id": "FJvpbflJYBgquc8p",
+        "text": "Lebanon"
+    },
+    {
+        "id": "5nDWZoWP6gkqkcMH",
+        "text": "Lesotho"
+    },
+    {
+        "id": "4jLsWlTnRokgOB0u",
+        "text": "Liberia"
+    },
+    {
+        "id": "uVyKZKZsqs4vUSTW",
+        "text": "Libya"
+    },
+    {
+        "id": "hE2iwGQHR9XpuYuA",
+        "text": "Liechtenstein"
+    },
+    {
+        "id": "uTlXmaf5Py9ilf4h",
+        "text": "Lithuania"
+    },
+    {
+        "id": "gwmxwO869HrthV1D",
+        "text": "Lord Howe Is"
+    },
+    {
+        "id": "ners3N9GbaImf1s3",
+        "text": "Luxembourg"
+    },
+    {
+        "id": "Fu0A7VRICRLDb1AE",
+        "text": "Macao"
+    },
+    {
+        "id": "Rib220u0tut5xJML",
+        "text": "Macedonia"
+    },
+    {
+        "id": "N9KU6yb9WLKc2tpR",
+        "text": "Macquarie Is"
+    },
+    {
+        "id": "Qes402VH4jTpnYbR",
+        "text": "Madagascar"
+    },
+    {
+        "id": "SBiZQozjIGv2PdcN",
+        "text": "Madeira Is"
+    },
+    {
+        "id": "qrkCRDDPa1EfoCy9",
+        "text": "Malawi"
+    },
+    {
+        "id": "kjv9WGjoMXtkhuvq",
+        "text": "Malaya"
+    },
+    {
+        "id": "nssAzvkDd1F8Nf6Z",
+        "text": "Maldives"
+    },
+    {
+        "id": "HXZQvdoz8Sz2eMWV",
+        "text": "Mali"
+    },
+    {
+        "id": "IsoA0sAhg8I0fZ0Z",
+        "text": "Malpelo Is"
+    },
+    {
+        "id": "wUChcUG7Q4lA4bNZ",
+        "text": "Malta"
+    },
+    {
+        "id": "HxjrsvbRdLWT3Eb8",
+        "text": "Malyj Vysotskij Is"
+    },
+    {
+        "id": "fnGZFt1wmBzYEG09",
+        "text": "Manchuria"
+    },
+    {
+        "id": "3Gm3MeBd64oCoS4r",
+        "text": "Mariana Is"
+    },
+    {
+        "id": "05fR3j2UW98QTbOl",
+        "text": "Market Reef"
+    },
+    {
+        "id": "PvA38OWZSAipiv25",
+        "text": "Marquesas Is"
+    },
+    {
+        "id": "zEXHX4QMHHiz9lty",
+        "text": "Marshall Is"
+    },
+    {
+        "id": "ECw8rPQvaoTTBZKS",
+        "text": "Martinique"
+    },
+    {
+        "id": "Y8ZkEzxvIC5TYrp8",
+        "text": "Mauritania"
+    },
+    {
+        "id": "aNToR98QsCdvlJfq",
+        "text": "Mauritius"
+    },
+    {
+        "id": "znkfhEPjyna91hG6",
+        "text": "Mayotte"
+    },
+    {
+        "id": "XpuWYWrbqlBnyjUK",
+        "text": "Mellish Reef"
+    },
+    {
+        "id": "dIzblDotx9rV367r",
+        "text": "Mexico"
+    },
+    {
+        "id": "Zp5P5D4rDaEQ6sKh",
+        "text": "Micronesia"
+    },
+    {
+        "id": "SsjGBGhoiN0ZCWdE",
+        "text": "Midway Is"
+    },
+    {
+        "id": "XZoncxIvM25IzLMv",
+        "text": "Minami Torishima"
+    },
+    {
+        "id": "Fv3eYCIkvn4578pf",
+        "text": "Minerva Reef"
+    },
+    {
+        "id": "0uLpTks2dfgId8cD",
+        "text": "Moldova"
+    },
+    {
+        "id": "ljCHFyogGjoh4BQy",
+        "text": "Monaco"
+    },
+    {
+        "id": "DPA1SlEAcEKX2qPV",
+        "text": "Mongolia"
+    },
+    {
+        "id": "hUZkwBsgBeuU0PUp",
+        "text": "Montenegro"
+    },
+    {
+        "id": "eDTVRnhS2f0MTDdU",
+        "text": "Montserrat"
+    },
+    {
+        "id": "3h6OVqcnbGWmGjPD",
+        "text": "Morocco"
+    },
+    {
+        "id": "s477Shad8EkhPYK8",
+        "text": "Mozambique"
+    },
+    {
+        "id": "3IdCGurUxJMbU6ud",
+        "text": "Mt Athos"
+    },
+    {
+        "id": "X1VdwT1g1jllCDgb",
+        "text": "Myanmar (Burma)"
+    },
+    {
+        "id": "0ONwprn7FK1oCVXH",
+        "text": "Namibia"
+    },
+    {
+        "id": "18h2pssUwsWTPRoK",
+        "text": "Nauru"
+    },
+    {
+        "id": "QBC2EO4xDheB0GXd",
+        "text": "Navassa Is"
+    },
+    {
+        "id": "CQKehqLZlUw2QK9M",
+        "text": "Nepal"
+    },
+    {
+        "id": "bt9SHeO5uMhTBacq",
+        "text": "Neth Antilles"
+    },
+    {
+        "id": "me2C5K96zv94qeBc",
+        "text": "Neth New Guinea"
+    },
+    {
+        "id": "2mdUetD2QioLNV84",
+        "text": "Netherlands"
+    },
+    {
+        "id": "RGf9XJF1BrOkgNnu",
+        "text": "Netherlands Borneo"
+    },
+    {
+        "id": "trQIpf5fkQWNtKWR",
+        "text": "New Caledonia"
+    },
+    {
+        "id": "v2asTjm21cUBg4wh",
+        "text": "New Zealand"
+    },
+    {
+        "id": "f7h7kHl6IGXdfwvx",
+        "text": "New Zealand Subantarctic Is"
+    },
+    {
+        "id": "Jl3cG4AIGrA83ejS",
+        "text": "Newfoundland, Labrador"
+    },
+    {
+        "id": "itgOvGNuLusrUvNm",
+        "text": "Nicaragua"
+    },
+    {
+        "id": "N0LqJnFi2uZ3bDqf",
+        "text": "Niger"
+    },
+    {
+        "id": "oO3aolqq2b1PcbrA",
+        "text": "Nigeria"
+    },
+    {
+        "id": "TbWtgB3tkBcmlaMo",
+        "text": "Niue"
+    },
+    {
+        "id": "F9Onrc7NmeiBMLAr",
+        "text": "No Cook Is"
+    },
+    {
+        "id": "xxsLA0bPSbkCiYWs",
+        "text": "No Ireland"
+    },
+    {
+        "id": "ARGW24ExLbQDRbMh",
+        "text": "No Korea"
+    },
+    {
+        "id": "T4m3JZKR6HdGXwPr",
+        "text": "Norfolk Is"
+    },
+    {
+        "id": "ashXXrkLqQMhboFl",
+        "text": "Norway"
+    },
+    {
+        "id": "WDWUmv19TVx16z8g",
+        "text": "Ogasawara"
+    },
+    {
+        "id": "3pXpv6YpUaTiCqmO",
+        "text": "Okinawa (Ryukyu)"
+    },
+    {
+        "id": "6MEyNTK8o11KHLc3",
+        "text": "Okino Tori-shima"
+    },
+    {
+        "id": "1BhVixAtC2Gq8UKA",
+        "text": "Oman"
+    },
+    {
+        "id": "nRuxFkspY0VGll3q",
+        "text": "Pakistan"
+    },
+    {
+        "id": "8hUUCPDGk2TUUzp0",
+        "text": "Palau"
+    },
+    {
+        "id": "6Oby85KbAh9EyXsr",
+        "text": "Palestine"
+    },
+    {
+        "id": "dbcG1lWk5eamcq91",
+        "text": "Palestine"
+    },
+    {
+        "id": "bOocAjyYsmSizJLR",
+        "text": "Palmyra, Jarvis Is"
+    },
+    {
+        "id": "aH48Q7Udlqxc8BEK",
+        "text": "Panama"
+    },
+    {
+        "id": "RYWbCRzz7qcHu8zK",
+        "text": "Papua New Guinea"
+    },
+    {
+        "id": "JmUcnq52pT4qcYja",
+        "text": "Papua Terr"
+    },
+    {
+        "id": "paGsBPRVeQd7Bhc8",
+        "text": "Paraguay"
+    },
+    {
+        "id": "vlxrcLwgeSL99RZI",
+        "text": "PDR Yemen"
+    },
+    {
+        "id": "k41Whyg1e77PP2DZ",
+        "text": "Penguin Is"
+    },
+    {
+        "id": "0bFRM0YRevsJ6ryd",
+        "text": "Peru"
+    },
+    {
+        "id": "UNQBgGU83KDgC9kN",
+        "text": "Peter I"
+    },
+    {
+        "id": "jq8Qd2qOq6cO4qFT",
+        "text": "Philippines"
+    },
+    {
+        "id": "BB8spQD84BwjqFCo",
+        "text": "Pitcairn Is"
+    },
+    {
+        "id": "Bxq4YsI82SzlX8OS",
+        "text": "Poland"
+    },
+    {
+        "id": "lJyOlav8rXqjp0BN",
+        "text": "Portugal"
+    },
+    {
+        "id": "CZtfFCLl8RAqx4wu",
+        "text": "Portuguese Timor"
+    },
+    {
+        "id": "Fcxpz9bYis8hDq6n",
+        "text": "Pr Edward & Marion Is"
+    },
+    {
+        "id": "gIxWADoMsHsS3EPn",
+        "text": "Pratas Is"
+    },
+    {
+        "id": "LUwCubk1ik5J2CDe",
+        "text": "Puerto Rico"
+    },
+    {
+        "id": "aZun9uG2BjdzSbgt",
+        "text": "Qatar"
+    },
+    {
+        "id": "N4IqcleWhKB0ay1G",
+        "text": "Reunion"
+    },
+    {
+        "id": "7IBnP4XuK4MttzcB",
+        "text": "Revilla Gigedo"
+    },
+    {
+        "id": "VwAAetVqZTUZrMbc",
+        "text": "Rodriguez Is"
+    },
+    {
+        "id": "8zqududIiRu66z9T",
+        "text": "Romania"
+    },
+    {
+        "id": "q4IEADRdkXsCiifj",
+        "text": "Rotuma"
+    },
+    {
+        "id": "IDdotJkxYvPq04hj",
+        "text": "Ruanda-Urundi"
+    },
+    {
+        "id": "bgwxLZiW3SxIqRqE",
+        "text": "Russia"
+    },
+    {
+        "id": "Dr9sj8LjV3yCzdpv",
+        "text": "Russia (Asiatic)"
+    },
+    {
+        "id": "sSbrD9BALI9ziOLK",
+        "text": "Rwanda"
+    },
+    {
+        "id": "pJrWYsEcGrKfpE9o",
+        "text": "S Arabia/Iraq NZ"
+    },
+    {
+        "id": "pR4mgoMMBsPn4ZWD",
+        "text": "Saar"
+    },
+    {
+        "id": "SxlrbgJ4iePmXhDQ",
+        "text": "Saba & St Eustatius"
+    },
+    {
+        "id": "IggiU4kkceDOp6OC",
+        "text": "Sable Is"
+    },
+    {
+        "id": "ZYhXKC9J6jsrkwIW",
+        "text": "Samoa"
+    },
+    {
+        "id": "uZ3OIl3RwYFGbdxz",
+        "text": "San Andres & Providencia"
+    },
+    {
+        "id": "hNtB7dZGtvPdBCpo",
+        "text": "San Felix"
+    },
+    {
+        "id": "XAUIIhIw9OcWkwzZ",
+        "text": "San Marino"
+    },
+    {
+        "id": "oGJrkx2joZLEkazq",
+        "text": "Sao Tome & Principe"
+    },
+    {
+        "id": "wBr9JYMxc5mVwDY7",
+        "text": "Sarawak"
+    },
+    {
+        "id": "r6dRwpJFtAzh7Rxo",
+        "text": "Sardinia"
+    },
+    {
+        "id": "Jd1JGQ7tEmlPQVzC",
+        "text": "Saudi Arabia"
+    },
+    {
+        "id": "TZAV0DhiYYUo8hRT",
+        "text": "Scarborough Reef"
+    },
+    {
+        "id": "xej7hO7f4vbipzeg",
+        "text": "Scotland"
+    },
+    {
+        "id": "osMgvDn9Z5oaJBzu",
+        "text": "Senegal"
+    },
+    {
+        "id": "gEkdqlE3HyDrM6nc",
+        "text": "Serbia"
+    },
+    {
+        "id": "cxbyJumi8UcmKKVn",
+        "text": "Serrana Bnk, Roncador Cay"
+    },
+    {
+        "id": "AJZigFykviWwPuzU",
+        "text": "Seychelles"
+    },
+    {
+        "id": "2AefRNLEd8S7dcss",
+        "text": "Sierra Leone"
+    },
+    {
+        "id": "Y7905BemGaybalqa",
+        "text": "Sikkim"
+    },
+    {
+        "id": "gHHcqpSB2UxXVlcq",
+        "text": "Singapore"
+    },
+    {
+        "id": "lVdVLRnRyQK6UNhw",
+        "text": "Slovakia"
+    },
+    {
+        "id": "oqvlPdnQ3QOCIMYN",
+        "text": "Slovenia"
+    },
+    {
+        "id": "VzFdedc5iIMpt7mo",
+        "text": "SMO Malta"
+    },
+    {
+        "id": "kzogtDq9LDrj6JLi",
+        "text": "So Africa"
+    },
+    {
+        "id": "2dvo7pUlpUbG5hkz",
+        "text": "So Cook Is"
+    },
+    {
+        "id": "Ig1bUDXwN2S29QIm",
+        "text": "So Georgia Is"
+    },
+    {
+        "id": "XuNALE5TVgi2pi1D",
+        "text": "So Korea"
+    },
+    {
+        "id": "ypQgFutOvL8tCvKZ",
+        "text": "So Orkney Is"
+    },
+    {
+        "id": "koYTab7AJRybwO3W",
+        "text": "So Sandwich Is"
+    },
+    {
+        "id": "m669sj2xzg0RcwDk",
+        "text": "So Shetland Is"
+    },
+    {
+        "id": "wL3DTEWzyMgSnoB0",
+        "text": "Solomon Is"
+    },
+    {
+        "id": "YMZOCvdRbIXsSlL3",
+        "text": "Somalia"
+    },
+    {
+        "id": "oY1h9szeqS1jEtnX",
+        "text": "South Sudan"
+    },
+    {
+        "id": "xiXuGanBomJwS93M",
+        "text": "Southern Sudan"
+    },
+    {
+        "id": "UYRaHSESINjIV0S1",
+        "text": "Spain"
+    },
+    {
+        "id": "F2i101yc7H29iuNL",
+        "text": "Spratly Is"
+    },
+    {
+        "id": "5Vm5beHCsBgCjweb",
+        "text": "Sri Lanka"
+    },
+    {
+        "id": "nXcvIMFGuBt2HNHp",
+        "text": "St Barthelemy"
+    },
+    {
+        "id": "qULA7hIVKkvFm2tu",
+        "text": "St Helena"
+    },
+    {
+        "id": "sXUM9RK5mjExOPRa",
+        "text": "St Kitts, Nevis"
+    },
+    {
+        "id": "h7U39oDLfpR3jxN7",
+        "text": "St Lucia"
+    },
+    {
+        "id": "pcDVt9uISRnxNEll",
+        "text": "St Maarten"
+    },
+    {
+        "id": "1YiU9qf4Rdt6wg8G",
+        "text": "St Maarten, Saba, St Eus"
+    },
+    {
+        "id": "5HBORD5KJbC69uzs",
+        "text": "St Martin"
+    },
+    {
+        "id": "rnhz9YAk2J0qaZE8",
+        "text": "St Paul Is"
+    },
+    {
+        "id": "qRdLGiSYUEHhm4N4",
+        "text": "St Peter & St Paul Rocks"
+    },
+    {
+        "id": "XcedSLUD7MsVc3Ro",
+        "text": "St Pierre & Miquelon"
+    },
+    {
+        "id": "B5qjaU1T5YvSySlh",
+        "text": "St Vincent"
+    },
+    {
+        "id": "fnnQlZxblsIAvnJd",
+        "text": "Sudan"
+    },
+    {
+        "id": "w58QHLwcC5I0CgUY",
+        "text": "Sumatra"
+    },
+    {
+        "id": "plJviVVJFZSK6NyE",
+        "text": "Surinam"
+    },
+    {
+        "id": "LqRfDspc9DZHVV2I",
+        "text": "Svalbard"
+    },
+    {
+        "id": "H7Sn2F9GNwUVhOf0",
+        "text": "Swain's Island"
+    },
+    {
+        "id": "UTMlZ4Q3JgBMlt6w",
+        "text": "Swan Is"
+    },
+    {
+        "id": "WX6bSF5e4r7E2E5B",
+        "text": "Swaziland"
+    },
+    {
+        "id": "iT0yLij6JHDIz5OS",
+        "text": "Sweden"
+    },
+    {
+        "id": "kplmopwgNORbsamd",
+        "text": "Switzerland"
+    },
+    {
+        "id": "3FyohCUgoAqgQN9h",
+        "text": "Syria"
+    },
+    {
+        "id": "exDWDDi55oA67LZO",
+        "text": "Taiwan"
+    },
+    {
+        "id": "pqec5FEwjC2ghc1I",
+        "text": "Tajikistan"
+    },
+    {
+        "id": "wS5m9tx46SoPFHZu",
+        "text": "Tangier"
+    },
+    {
+        "id": "NydWikzoQgUQ9Cut",
+        "text": "Tanzania"
+    },
+    {
+        "id": "i4hQG0vIKDh8D4bs",
+        "text": "Temotu"
+    },
+    {
+        "id": "YOgDVJg9B2Qs72Ob",
+        "text": "Terr New Guinea"
+    },
+    {
+        "id": "sVrqHRG0YAj5ihCM",
+        "text": "Thailand"
+    },
+    {
+        "id": "v8zr5dBfL9H5NZn1",
+        "text": "Tibet"
+    },
+    {
+        "id": "XF0o22ZjohgqSnX3",
+        "text": "Timor Leste"
+    },
+    {
+        "id": "L6gvuUu070W78WNy",
+        "text": "Togo"
+    },
+    {
+        "id": "ieH3UtxgBvqoZtod",
+        "text": "Tokelau Is"
+    },
+    {
+        "id": "M0sFJ9DP8dZmLp4L",
+        "text": "Tonga"
+    },
+    {
+        "id": "F1ffpCHnNCZBVVLD",
+        "text": "Trieste"
+    },
+    {
+        "id": "D62dyOfPiwAvtor5",
+        "text": "Trindade & Martin Vaz Is"
+    },
+    {
+        "id": "QQmuzcfVCEII6wT4",
+        "text": "Trinidad & Tobago"
+    },
+    {
+        "id": "5EG3sKSOPaeULhY7",
+        "text": "Tristan da Cunha & Gough Is"
+    },
+    {
+        "id": "dIZ5fWdsldXqcssT",
+        "text": "Tromelin"
+    },
+    {
+        "id": "tdiotgQrumpmsbCG",
+        "text": "Tunisia"
+    },
+    {
+        "id": "wTeNTDnSybHfoQaG",
+        "text": "Turkey"
+    },
+    {
+        "id": "M7flP6ARsHSkxHB0",
+        "text": "Turkmenistan"
+    },
+    {
+        "id": "wxgT845kuGIq7E93",
+        "text": "Turks & Caicos Is"
+    },
+    {
+        "id": "wmsX0s545ZweShWD",
+        "text": "Tuvalu"
+    },
+    {
+        "id": "sEhlvO64A5jWnlQq",
+        "text": "Uganda"
+    },
+    {
+        "id": "Tc4rd2BiM2kSi7Sl",
+        "text": "Ukraine"
+    },
+    {
+        "id": "DwCrsmf2SeXjmr8u",
+        "text": "UN HQ"
+    },
+    {
+        "id": "rfDgGrLcqTAFRmLv",
+        "text": "United Arab Emirates"
+    },
+    {
+        "id": "KOrsbavvxfvMeZh7",
+        "text": "United States"
+    },
+    {
+        "id": "jrO1EVu4DDBjNvxp",
+        "text": "Uruguay"
+    },
+    {
+        "id": "Ych1QEuMHotnJzEf",
+        "text": "Uzbekistan"
+    },
+    {
+        "id": "nWIgCbZvzZc3XAWO",
+        "text": "Vanuatu"
+    },
+    {
+        "id": "hX0ieO3JPRoF5WTA",
+        "text": "Vatican"
+    },
+    {
+        "id": "9MCwqe8zykIb4e0l",
+        "text": "Venezuela"
+    },
+    {
+        "id": "NMUFazXQeJMnO2K6",
+        "text": "Vietnam"
+    },
+    {
+        "id": "vsrsknt2Hfn31Srt",
+        "text": "Virgin Is"
+    },
+    {
+        "id": "R2vGql1gQI9P1aof",
+        "text": "Wake Is"
+    },
+    {
+        "id": "FxgrrdSCuLKdWeqS",
+        "text": "Wales"
+    },
+    {
+        "id": "AumFGkb9lUkcOWvc",
+        "text": "Wallis & Futuna Is"
+    },
+    {
+        "id": "bdPKTZO1dZKhvdSZ",
+        "text": "Walvis Bay"
+    },
+    {
+        "id": "BFxleKcCDkmAuSsC",
+        "text": "West Kiribati"
+    },
+    {
+        "id": "4q9qSyrIRrCarhc2",
+        "text": "West Malaysia"
+    },
+    {
+        "id": "1PcqDCcbnpZ5EUiA",
+        "text": "Western Sahara"
+    },
+    {
+        "id": "ilSau3UuybgtvxZV",
+        "text": "Willis Is"
+    },
+    {
+        "id": "S1HSOaGPoRAxhn0R",
+        "text": "Yemen"
+    },
+    {
+        "id": "fzMgm8Wj73NLGKvZ",
+        "text": "Yemen Arab Rep"
+    },
+    {
+        "id": "kXvVij9PUoq2AVwa",
+        "text": "Zambia"
+    },
+    {
+        "id": "KdjsckP0UdhcYPpX",
+        "text": "Zanzibar"
+    },
+    {
+        "id": "8punDIloAXz37ZIq",
+        "text": "Zimbabwe"
+    },
+    {
+        "id": "se2oYoxNwOjV9vfV",
+        "text": "Soviet Union (USSR)"
+    }
+]

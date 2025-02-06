@@ -1,0 +1,6 @@
+{
+    "meta": "http://127.0.0.1:5501",
+    "columns": ["content", "archive_filename", "thumbnail_filename", "to_process", "from_call", "to_call", "time_utc", "date_utc", "frequency", "mode", "rst", "country", "us_canada_region", "frequency_band", "ussr_region"],
+    "dbVersion": 1,
+    "dbName": "comHadleyQSLA"
+}
