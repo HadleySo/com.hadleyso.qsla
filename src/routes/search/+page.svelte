@@ -11,12 +11,22 @@
         DatePicker,
         DatePickerInput,
         Modal,
-        InlineLoading
+        InlineLoading,
+        ProgressBar,
+        DataTable,
+        ToolbarContent,
+        ToolbarMenuItem,
+        ToolbarMenu,
+        ToolbarSearch,
+        Toolbar,
+        Pagination,
+        DataTableSkeleton
     } from "carbon-components-svelte";
     import {
         goto
     } from '$app/navigation';
     import { browser } from '$app/environment';
+    import sources from '$lib/metadata-config/sources.json';
 
 	let { data } = $props();
 
@@ -56,6 +66,90 @@
         }
     }
 
+
+    let step02ProgressBar = $state("active");
+    let step02ProgressBarLabel = $state("Searching...");
+    let pageSize = $state(15);
+    let page = $state(1);
+    let rows = $state([
+        {
+            id: "a",
+            pk: "...",
+            from_call: "...",
+            to_call: "...",
+            date_utc: "...",
+            country: "...",
+            us_canada_region: "...",
+        },
+        {
+            id: "b",
+            pk: "...",
+            from_call: "...",
+            to_call: "...",
+            date_utc: "...",
+            country: "...",
+            us_canada_region: "...",
+        },
+        {
+            id: "c",
+            pk: "...",
+            from_call: "...",
+            to_call: "...",
+            date_utc: "...",
+            country: "...",
+            us_canada_region: "...",
+        },
+        {
+            id: "d",
+            pk: "...",
+            from_call: "...",
+            to_call: "...",
+            date_utc: "...",
+            country: "...",
+            us_canada_region: "...",
+        },
+    ]);
+    
+    function searchSubmit() {
+
+        // Show loading bar
+        document.getElementById("step01").style.display = "none";
+        document.getElementById("step02").style.display = "block";
+        document.getElementById("dataTableReal").style.display = "none";
+        document.getElementById("dataTableFake").style.display = "block";
+
+        // Send new promise
+        const searchPromise = new Promise((resolve, reject) => {
+            try{
+                resolve(searchFormWrap(from_call, to_call, frequency, rst, freeContent, country, mode, us_canada_region, ussr_region, date_utc_start, date_utc_end));
+            }
+            catch (e) {
+                reject(e);
+            }
+        });
+
+        // Handle promise return
+        searchPromise.then(
+            (value) => {
+                // success
+                console.log(`searchPromise done ${value}`);
+                document.getElementById("step01").style.display = "block";
+                document.getElementById("step02").style.display = "none";
+                document.getElementById("dataTableReal").style.display = "block";
+                document.getElementById("dataTableFake").style.display = "none";
+                rows = value;
+            },
+            (reason) => {
+                // failure
+                step02ProgressBar="error";
+                step02ProgressBarLabel=`Error: ${reason}`
+
+            }
+        );
+
+        
+    }
+
 </script>
 
 <Grid>
@@ -70,7 +164,7 @@
                 method="POST"
                 onsubmit={(e) => {
                     e.preventDefault();
-                    searchFormWrap(from_call, to_call, frequency, rst, freeContent, country, mode, us_canada_region, ussr_region, date_utc_start, date_utc_end);
+                    searchSubmit();
                 }}
               >
                 <Row>
@@ -144,8 +238,48 @@
 
                 <br style="margin-top: 40px;">
 
-                <Button type="submit">Submit</Button>
+                <Button type="submit" id="step01">Submit</Button>
             </Form>
+        </Column>
+    </Row>
+    <Row id="step02" style="display: none;">
+        <Column>
+            <ProgressBar bind:helperText={step02ProgressBarLabel} bind:status={step02ProgressBar} />
+        </Column>
+    </Row>
+    <Row>
+        <Column>
+            <hr style="margin-top: 60px; margin-bottom: 60px;">
+            <DataTable
+                title="Search results"
+                sortable
+                headers={sources.tableHeaders}
+                {pageSize}
+                {page}
+                id="dataTableReal"
+                bind:rows={rows}
+            >
+                <Toolbar size="sm">
+                    <ToolbarContent>
+                    <ToolbarSearch 
+                        persistent
+                        shouldFilterRows
+                        placeholder="Search From (Callsign)..."
+                    />
+                    <ToolbarMenu>
+                        <ToolbarMenuItem on:click={() => {goto("/getting-started")}}>Metadata Information</ToolbarMenuItem>
+                    </ToolbarMenu>
+                    </ToolbarContent>
+                </Toolbar>
+                <Pagination
+                    bind:pageSize
+                    bind:page
+                    totalItems={rows.length}
+                    pageSizeInputDisabled
+                />
+            </DataTable>
+
+            <DataTableSkeleton id="dataTableFake" style="display: none;" />
         </Column>
     </Row>
 </Grid>

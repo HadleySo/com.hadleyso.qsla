@@ -230,6 +230,8 @@ export async function searchFormWrap(from_call, to_call, frequency, rst, freeCon
     console.debug(`Search pk results: ${v}`);    
 
     let cardData = multiURN(v);
+
+    await new Promise(resolve => setTimeout(resolve, 1000));
     return cardData;
 }
 
@@ -244,7 +246,7 @@ export async function multiURN(pks) {
      * @type {never[]}
      */
     var cardData = [];
-
+    var tableId = 1;
     return new Promise(function(resolve, reject) {
         try {
             // Request DB
@@ -294,7 +296,9 @@ export async function multiURN(pks) {
                     };
                     requestObj.onsuccess = () => {
                         // @ts-ignore
+                        requestObj.result.id = tableId;
                         cardData.push(requestObj.result);
+                        tableId++;
                     };
 
     
