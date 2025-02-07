@@ -71,7 +71,8 @@
                 <HeaderPanelLink><Link href="https://w9yt.rso.engr.wisc.edu/" target="_blank">UW Madison BARS</Link></HeaderPanelLink>
                 <HeaderPanelLink><Link href="/contact">Contact</Link></HeaderPanelLink>
                 <HeaderPanelDivider>Contribute</HeaderPanelDivider>
-                <HeaderPanelLink><Link href="https://bars-qsl.hadleyso.com/" target="_blank">Metadata Keying Platform</Link></HeaderPanelLink>
+                <HeaderPanelLink><Link href="/metadata-contribute">Metadata</Link></HeaderPanelLink>
+                <HeaderPanelLink><Link href="https://github.com/HadleySo/com.hadleyso.qsla">GitHub</Link></HeaderPanelLink>
                 <HeaderPanelLink><Link href="https://buymeacoffee.com/hadleyso" target="_blank">Donate</Link></HeaderPanelLink>
                 <HeaderPanelDivider>Credit</HeaderPanelDivider>
                 <HeaderPanelLink><Link href="https://hadleyso.com/" target="_blank">Hadley So</Link></HeaderPanelLink>

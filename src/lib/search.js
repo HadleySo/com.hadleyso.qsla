@@ -163,12 +163,12 @@ export async function searchFullInputKeys(from_call, to_call, frequency, rst, fr
                                 cursor.continue();
                             } else {
                                 searchKeyResults.push(tempListKeys);
-                                tempListKeys = [];
                                 console.debug(`Pushing to searchKeyResults ${tempListKeys}`);
                             }
                         };
     
                     }
+                    tempListKeys = [];
                     
                 } 
 
