@@ -20,10 +20,11 @@
             <h1 style="padding-bottom: 40px;">Getting Started</h1>
             <p class="column-text" style="font-size: 20px; font-weight: 400;">
                 Search by specific metadata or get a card by its URN. Those
-                options are always avalibe at the top menu.
+                options are always available at the top menu.
             </p>
             <p class="column-text">
-                If there is a country that you want to explore, start there!
+                The easiest way to start is to search by US State first, select 1 to 3 states and see what
+                comes up. If there is a country that you want to explore, start there!
             </p>
 
             <Button
