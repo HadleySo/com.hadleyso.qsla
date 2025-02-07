@@ -100,6 +100,9 @@ export async function loadData() {
 
             // Iterate through items
             items.forEach((item) => {
+                item.date_utc = Date.parse(item.date_utc); 
+                item.frequency = parseFloat(item.frequency); 
+                item.rst = Number(item.rst); 
                 const request = objectStore.add(item);
                 request.onerror = (event) => {
                     console.error(event)

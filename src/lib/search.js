@@ -28,8 +28,8 @@ export async function searchFullInputKeys(from_call, to_call, frequency, rst, fr
     let searchStrings = {
         'from_call': from_call,
         'to_call': to_call, 
-        'frequency': frequency,
-        'rst': rst,
+        'frequency': parseFloat(frequency),
+        'rst': Number(rst),
         'freeContent': freeContent
     };
     let searchSelects = {
@@ -37,6 +37,13 @@ export async function searchFullInputKeys(from_call, to_call, frequency, rst, fr
         'mode': mode, 
         'us_canada_region': us_canada_region, 
         'ussr_region': ussr_region
+    }
+
+    if (date_utc_start) {
+        date_utc_start = Date.parse(date_utc_start);
+    }
+    if (date_utc_end) {
+        date_utc_end = Date.parse(date_utc_end);
     }
 
     // CLEAN UP DICT AND REMOVE EMPTY
@@ -152,6 +159,33 @@ export async function searchFullInputKeys(from_call, to_call, frequency, rst, fr
                         };
     
                     }
+                    
+                } 
+
+                // SEARCH INPUT DATE VALUES
+                // SAVE PRIMARY KEYS FOUND
+                if (date_utc_start && date_utc_end) {
+                    /**
+                     * @type {any[]}
+                     */
+                    var tempListKeys = [];
+    
+                    const readIndex = objectStore.index("date_utc");
+                    const fromCallRange = IDBKeyRange.bound(date_utc_start, date_utc_end);
+    
+                    console.debug(`RangeValue date_utc - next starting cursor`);
+                    readIndex.openKeyCursor(fromCallRange).onsuccess = (event) => {
+                        const cursor = event.target.result;
+                        if (cursor) {
+                            tempListKeys.push(cursor.primaryKey);
+                            console.debug(`RangeValue cursor found entry: ${cursor.primaryKey} `);
+                            cursor.continue();
+                        } else {
+                            searchKeyResults.push(tempListKeys);
+                            tempListKeys = [];
+                            console.debug(`Pushing to searchKeyResults ${tempListKeys}`);
+                        }
+                    };
                     
                 } 
         
@@ -297,6 +331,10 @@ export async function multiURN(pks) {
                     requestObj.onsuccess = () => {
                         // @ts-ignore
                         requestObj.result.id = tableId;
+
+                        var date_int = new Date(requestObj.result.date_utc);
+                        requestObj.result.date_utc = date_int.toLocaleDateString('en-GB', {year: 'numeric', month: 'short', day: '2-digit'});
+
                         cardData.push(requestObj.result);
                         tableId++;
                     };
