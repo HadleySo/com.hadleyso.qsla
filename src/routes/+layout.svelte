@@ -67,6 +67,7 @@
         <HeaderAction bind:isOpen transition={{duration: 600, delay: 50, easing: expoIn}}>
             <HeaderPanelLinks>
                 <HeaderPanelDivider>About the Project</HeaderPanelDivider>
+                <HeaderPanelLink><Link href="/about">The Project</Link></HeaderPanelLink>
                 <HeaderPanelLink><Link href="https://hadleyso.com/gxr/2024/qsl-cards.html" target="_blank">How it started</Link></HeaderPanelLink>
                 <HeaderPanelLink><Link href="https://w9yt.rso.engr.wisc.edu/" target="_blank">UW Madison BARS</Link></HeaderPanelLink>
                 <HeaderPanelLink><Link href="/contact">Contact</Link></HeaderPanelLink>
