@@ -17,7 +17,6 @@
         ToolbarContent,
         ToolbarMenuItem,
         ToolbarMenu,
-        ToolbarSearch,
         Toolbar,
         Pagination,
         DataTableSkeleton
@@ -171,9 +170,13 @@
                     <Column>
                         <TextInput style="margin-bottom:40px;" labelText="From Call Sign" placeholder="Call sign..." id="from_call" name="from_call" bind:value={from_call}></TextInput>
                         <TextInput style="margin-bottom:40px;" labelText="To Call Sign" placeholder="Call sign..." id="to_call" name="to_call" bind:value={to_call}></TextInput>       
-                        <br style="margin-top: 40px;">
                         
-                        <TextInput style="margin-bottom:40px;" labelText="Contents" placeholder="73s from..." id="freeContent" name="freeContent" bind:value={freeContent}></TextInput>
+                        <FormGroup legendText="Date of Contact - Range" style="margin-top: 40px;">
+                            <DatePicker datePickerType="range" on:change bind:valueFrom={date_utc_start} bind:valueTo={date_utc_end}>
+                                <DatePickerInput labelText="Start" placeholder="mm/dd/yyyy" id="date_utc_start" name="date_utc_start" />
+                                <DatePickerInput labelText="End" placeholder="mm/dd/yyyy" id="date_utc_end" name="date_utc_end" />
+                            </DatePicker>
+                        </FormGroup>
  
                     </Column>
 
@@ -181,13 +184,6 @@
                         <TextInput style="margin-bottom:40px;" labelText="Frequency" placeholder="Frequency..." id="frequency" name="frequency" bind:value={frequency}></TextInput>
                         <TextInput style="margin-bottom:40px;" labelText="RST" placeholder="RST..." id="rst" name="rst" bind:value={rst}></TextInput>
 
-                        
-                        <FormGroup legendText="Date of Contact - Range" style="margin-top: 30px;">
-                            <DatePicker datePickerType="range" on:change bind:valueFrom={date_utc_start} bind:valueTo={date_utc_end}>
-                                <DatePickerInput labelText="Start" placeholder="mm/dd/yyyy" id="date_utc_start" name="date_utc_start" />
-                                <DatePickerInput labelText="End" placeholder="mm/dd/yyyy" id="date_utc_end" name="date_utc_end" />
-                            </DatePicker>
-                        </FormGroup>
         
                     </Column>
                 
@@ -253,6 +249,8 @@
             <DataTable
                 title="Search results"
                 sortable
+                expandable
+                nonExpandableRowIds={["a", "b", "c", "d"]}
                 headers={sources.tableHeaders}
                 {pageSize}
                 {page}
@@ -261,11 +259,6 @@
             >
                 <Toolbar size="sm">
                     <ToolbarContent>
-                    <ToolbarSearch 
-                        persistent
-                        shouldFilterRows
-                        placeholder="Search From (Callsign)..."
-                    />
                     <ToolbarMenu>
                         <ToolbarMenuItem on:click={() => {goto("/getting-started")}}>Metadata Information</ToolbarMenuItem>
                     </ToolbarMenu>
@@ -277,6 +270,9 @@
                     totalItems={rows.length}
                     pageSizeInputDisabled
                 />
+                <svelte:fragment slot="expanded-row" let:row>
+                    <pre>{JSON.stringify(row, null, 2)}</pre>
+                </svelte:fragment>
             </DataTable>
 
             <DataTableSkeleton id="dataTableFake" style="display: none;" />
