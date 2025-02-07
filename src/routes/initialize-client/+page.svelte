@@ -151,7 +151,7 @@
 </span>
 
 <!--  initialize Disclaimer -->
-<ComposedModal bind:open={initializeDisclaimerOpen} on:submit={() => (disclaimerApproved())} size="xs">
+<ComposedModal bind:open={initializeDisclaimerOpen} on:submit={() => (disclaimerApproved())}>
     <ModalBody hasForm>
         <InlineNotification
             lowContrast

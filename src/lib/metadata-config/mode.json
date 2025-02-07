@@ -1,58 +1,58 @@
 [
     {
-        "id": "yBLKfBUI2RSBkcPk",
+        "id": "[UNLISTED]",
         "text": "[UNLISTED]"
     },
     {
-        "id": "HmmcDO5T2i3uMkfD",
+        "id": "USB",
         "text": "USB"
     },
     {
-        "id": "nx6ktCM26v95M1pq",
+        "id": "LSB",
         "text": "LSB"
     },
     {
-        "id": "g9CQum9EfiZeW4OP",
+        "id": "AM",
         "text": "AM"
     },
     {
-        "id": "w03L5FFOtZDmXwfy",
+        "id": "FM",
         "text": "FM"
     },
     {
-        "id": "5BEVmmLHUty6F3Na",
+        "id": "Digital Voice",
         "text": "Digital Voice"
     },
     {
-        "id": "iRRvYWFIM8DMG34M",
+        "id": "FT8",
         "text": "FT8"
     },
     {
-        "id": "zeLzYuWPtzpmkHKJ",
+        "id": "Packet",
         "text": "Packet"
     },
     {
-        "id": "ZNRnYkOOHSxqCnpu",
+        "id": "PSK31",
         "text": "PSK31"
     },
     {
-        "id": "ngS5h3NtKnuj9Cfn",
+        "id": "RTTY",
         "text": "RTTY"
     },
     {
-        "id": "0i4vCjPzNKrI2iy4",
+        "id": "CCW",
         "text": "CCW"
     },
     {
-        "id": "OivrC4QLauHJFyrI",
+        "id": "CW",
         "text": "CW"
     },
     {
-        "id": "NPUzhIRvWVd9zvWR",
+        "id": "Phone",
         "text": "Phone"
     },
     {
-        "id": "Tcjphy3xVc5kZnc1",
+        "id": "SSB",
         "text": "SSB"
     }
 ]

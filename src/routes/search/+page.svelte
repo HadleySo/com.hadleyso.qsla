@@ -20,7 +20,7 @@
 
 	let { data } = $props();
 
-    import { search } from '$lib/search.js'
+    import { searchFormWrap } from '$lib/search.js'
     import { getCookie } from "$lib/cookie.js";
 
     let from_call = $state("");
@@ -70,7 +70,7 @@
                 method="POST"
                 onsubmit={(e) => {
                     e.preventDefault();
-                    search(from_call, to_call, frequency, rst, freeContent, country, mode, us_canada_region, ussr_region, date_utc_start, date_utc_end);
+                    searchFormWrap(from_call, to_call, frequency, rst, freeContent, country, mode, us_canada_region, ussr_region, date_utc_start, date_utc_end);
                 }}
               >
                 <Row>
