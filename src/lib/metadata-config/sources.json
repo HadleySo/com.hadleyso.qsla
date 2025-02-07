@@ -45,5 +45,6 @@
             "value" : "US State / Canada Province"
         }
         
-    ]
+    ],
+    "s3": "s3://bars-qsl-requestor-p-tetirxjdzxfqwsggmro5en3nmjyfouse2b-s3alias"
 }

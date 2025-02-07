@@ -60,7 +60,6 @@
         <HeaderNavItem href="/" text="/" />
         <HeaderNavItem href="/search" text="Metadata Search" />
         <HeaderNavItem href="/urn" text="Card ID Reference" />
-        <HeaderNavItem href="/random" text="Random Cards" />
     </HeaderNav>
 
     <HeaderUtilities>

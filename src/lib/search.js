@@ -196,7 +196,7 @@ export async function searchFullInputKeys(from_call, to_call, frequency, rst, fr
     
         } catch(e) {
             console.error(e);
-            reject("IndexedDb unable to load data");
+            reject(`IndexedDb unable to load data - ${e}`);
             throw new Error('IndexedDb unable to load data');
         }
     
@@ -321,7 +321,7 @@ export async function multiURN(pks) {
                     /**
                      * @type {any[]}
                      */
-                    const requestObj = objectStore.get(key);
+                    const requestObj = objectStore.get(Number(key));
                     requestObj.onerror = () => {
                         // Handle errors!
                         console.error(`Unable to retrieve pk ${key}`);
@@ -329,6 +329,13 @@ export async function multiURN(pks) {
                         throw new Error('Unable to retrieve pk ${key}');
                     };
                     requestObj.onsuccess = () => {
+                        
+                        if (typeof requestObj.result == 'undefined') {
+                            console.error(`requestObj.result is undefined, even in requestObj.onsuccess`);
+                            reject(`requestObj.result is undefined, even in requestObj.onsuccess`);
+                            throw new Error('requestObj.result is undefined, even in requestObj.onsuccess');
+                        }
+
                         // @ts-ignore
                         requestObj.result.id = tableId;
 
@@ -351,7 +358,7 @@ export async function multiURN(pks) {
     
         } catch(e) {
             console.error(e);
-            reject("IndexedDb unable to load data");
+            reject(`IndexedDb unable to load data - ${e}`);
             throw new Error('IndexedDb unable to load data');
         }
     

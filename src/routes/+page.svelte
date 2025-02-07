@@ -34,7 +34,7 @@
             <ButtonSet>
                 <Button kind="primary" on:click={() => {goto("/search")}}>Search</Button>
                 <Button kind="secondary" on:click={() => {goto("/getting-started")}}>Explore QSL Cards</Button>
-                <Button kind="secondary" on:click={() => {goto("/contact")}}>Contact</Button>
+                <Button kind="secondary" on:click={() => {goto("/cite")}}>Credit / Cite this</Button>
             </ButtonSet>
 
 

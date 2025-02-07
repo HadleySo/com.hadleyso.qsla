@@ -20,7 +20,7 @@
                 To contact the Badger Amateur Radio Society please visit their <OutboundLink inline href="https://w9yt.rso.engr.wisc.edu/" target="_blank" style="font-size: inherit;">website</OutboundLink>.
             
                 <br><br>
-                Email: <CodeSnippet type="inline" code="info@qsla.hadleyso.com" />
+                Email: <CodeSnippet type="inline" code="https://www.hadleyso.com/gxr/contact" />
             </p>
         </Column>
     </Row>
