@@ -19,7 +19,10 @@
         ToolbarMenu,
         Toolbar,
         Pagination,
-        DataTableSkeleton
+        DataTableSkeleton,
+
+        Link
+
     } from "carbon-components-svelte";
     import {
         goto
@@ -31,6 +34,7 @@
 
     import { searchFormWrap } from '$lib/search.js'
     import { getCookie } from "$lib/cookie.js";
+    import { Launch } from "carbon-icons-svelte";
 
     let from_call = $state("");
     let to_call = $state("");
@@ -273,6 +277,16 @@
                 <svelte:fragment slot="expanded-row" let:row>
                     <pre>{JSON.stringify(row, null, 2)}</pre>
                 </svelte:fragment>
+                <svelte:fragment slot="cell" let:row let:cell>
+                    {#if cell.key === "pk" && cell.value !== "..."}
+                      <Link
+                        icon={Launch}
+                        href="/urn?pk={cell.value}">{cell.value}
+                    </Link>
+                    {:else}
+                      {cell.value}
+                    {/if}
+                  </svelte:fragment>
             </DataTable>
 
             <DataTableSkeleton id="dataTableFake" style="display: none;" />
