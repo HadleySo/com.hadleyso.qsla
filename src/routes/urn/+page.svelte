@@ -234,22 +234,22 @@
                 <h2 style="padding-top: 40px;">Citation for URN {displayCardData['pk']}</h2>
                 <p class="column-text">
                     MLA
-                    <CodeSnippet type="single" 
-                        code="So, Hadley, et al. card number/URN {displayCardData['pk']}. QSL Card Archive. 2025. QSL Card Archive of University of Wisconsin-Madison Badger Amateur Radio Society, Collection. https://qsla.hadleyso.com/urn?pk={displayCardData['pk']}. "
-                    />
                 </p>
+                <CodeSnippet type="single" 
+                    code="So, Hadley, et al. card number/URN {displayCardData['pk']}. QSL Card Archive. 2025. QSL Card Archive of University of Wisconsin-Madison Badger Amateur Radio Society, Collection. https://qsla.hadleyso.com/urn?pk={displayCardData['pk']}. "
+                />
                 <p class="column-text">
                     CHICAGO
-                    <CodeSnippet type="single" 
-                        code='So, Hadley, Skylar Culek, and Nicholas Winer. "QSL Card Archive." Collection, QSL Card Archive of University of Wisconsin-Madison Badger Amateur Radio Society, card number/URN {displayCardData['pk']}. 2025.'
-                    />
                 </p>
+                <CodeSnippet type="single" 
+                    code='So, Hadley, Skylar Culek, and Nicholas Winer. "QSL Card Archive." Collection, QSL Card Archive of University of Wisconsin-Madison Badger Amateur Radio Society, card number/URN {displayCardData['pk']}. 2025.'
+                />
                 <p class="column-text">
                     APA
-                    <CodeSnippet type="single" 
-                        code="So, H., Culek, S., & Winer, N. (2025). QSL Card Archive [Collection]. QSL Card Archive of University of Wisconsin-Madison Badger Amateur Radio Society. card number/URN {displayCardData['pk']}. https://qsla.hadleyso.com/urn?pk={displayCardData['pk']} "
-                    />
                 </p>
+                <CodeSnippet type="single" 
+                    code="So, H., Culek, S., & Winer, N. (2025). QSL Card Archive [Collection]. QSL Card Archive of University of Wisconsin-Madison Badger Amateur Radio Society. card number/URN {displayCardData['pk']}. https://qsla.hadleyso.com/urn?pk={displayCardData['pk']} "
+                />
             </div>
 
         </Column>

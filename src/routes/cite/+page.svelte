@@ -14,22 +14,23 @@
             <h1 style="padding-bottom: 40px;">Cite</h1>
             <p class="column-text">
                 MLA
-                <CodeSnippet type="single" 
-                    code="So, Hadley, et al. QSL Card Archive. 2025. QSL Card Archive of University of Wisconsin-Madison Badger Amateur Radio Society, Collection. https://qsla.hadleyso.com. "
-                />
             </p>
+            <CodeSnippet type="single" 
+                code="So, Hadley, et al. QSL Card Archive. 2025. QSL Card Archive of University of Wisconsin-Madison Badger Amateur Radio Society, Collection. https://qsla.hadleyso.com. "
+            />
             <p class="column-text">
                 CHICAGO
-                <CodeSnippet type="single" 
-                    code='So, Hadley, Skylar Culek, and Nicholas Winer. "QSL Card Archive." Collection, QSL Card Archive of University of Wisconsin-Madison Badger Amateur Radio Society, 2025.'
-                />
             </p>
+            <CodeSnippet type="single" 
+                code='So, Hadley, Skylar Culek, and Nicholas Winer. "QSL Card Archive." Collection, QSL Card Archive of University of Wisconsin-Madison Badger Amateur Radio Society, 2025.'
+            />
+
             <p class="column-text">
                 APA
-                <CodeSnippet type="single" 
-                    code="So, H., Culek, S., & Winer, N. (2025). QSL Card Archive [Collection]. QSL Card Archive of University of Wisconsin-Madison Badger Amateur Radio Society. https://qsla.hadleyso.com "
-                />
             </p>
+            <CodeSnippet type="single" 
+                code="So, H., Culek, S., & Winer, N. (2025). QSL Card Archive [Collection]. QSL Card Archive of University of Wisconsin-Madison Badger Amateur Radio Society. https://qsla.hadleyso.com "
+            />
 
 
         </Column>
