@@ -1,3 +1,4 @@
+import { goto } from '$app/navigation';
 import sources from '$lib/metadata-config/sources.json';
 
 /**
@@ -94,6 +95,15 @@ export async function searchFullInputKeys(from_call, to_call, frequency, rst, fr
     
                 const transaction = db.transaction(["qslCardMeta"], "readonly");
                 const objectStore = transaction.objectStore("qslCardMeta");
+
+                // CHECK THAT DB HAS CONTENT
+                var count = objectStore.count();
+                count.onsuccess = function() {
+                    console.log(`IndexedDB row count: ${count.result}`);
+                    if (count.result < 3000) {
+                        goto("/initialize-client?reset")
+                    }
+                }
     
                 // CATCH PROMISE WHEN TRANSACTION DONE
                 transaction.addEventListener("complete", (event) => {

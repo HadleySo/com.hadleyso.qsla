@@ -38,7 +38,16 @@ export async function initialize() {
 
         request.onsuccess = (event) => {
             const db = event.target.result;
-            console.log("IndexedDB opened")
+            console.log("IndexedDB opened");
+            var store = db.transaction(['qslCardMeta']).objectStore('qslCardMeta');
+            var count = store.count();
+            count.onsuccess = function() {
+                console.log(`IndexedDB row count: ${count.result}`);
+                if (count.result < 3000) {
+                    needLoadData = true;
+                }
+            }
+
         };
 
 
@@ -118,4 +127,23 @@ export async function loadData() {
         throw new Error('IndexedDb unable to load data');
     }
   
+}
+
+export async function resetDb() {
+
+    return new Promise(function(resolve, reject) {
+
+        const DBDeleteRequest = window.indexedDB.deleteDatabase(sources.dbName);
+
+        DBDeleteRequest.onerror = (event) => {
+            console.error("Error deleting database.");
+            reject("Error deleting database");
+        };
+
+        DBDeleteRequest.onsuccess = (event) => {
+            console.log("Database deleted successfully");
+            resolve("Database deleted successfully");
+        };
+    });
+
 }

@@ -77,6 +77,8 @@
                 <HeaderPanelLink><Link href="https://hadleyso.com/" target="_blank">Hadley So</Link></HeaderPanelLink>
                 <HeaderPanelLink><Link href="https://w9yt.rso.engr.wisc.edu/" target="_blank">UW Madison BARS</Link></HeaderPanelLink>
                 <HeaderPanelLink><Link href="/cite">Cite this project</Link></HeaderPanelLink>
+                <HeaderPanelDivider>Debug</HeaderPanelDivider>
+                <HeaderPanelLink><Link href="/initialize-client?reset">Reset IndexedDB</Link></HeaderPanelLink>
                 <HeaderPanelDivider>Copyright</HeaderPanelDivider>
                 <div class="panel-footer">
                     Copyright © 2024-2025 <a href="https://hadleyso.com/" style="text-decoration: none; color: inherit;">Hadley So</a> or affiliates. All rights reserved. <br><br>

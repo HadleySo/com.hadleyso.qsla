@@ -21,12 +21,11 @@
 	import { onMount } from 'svelte';
     import sources from '$lib/metadata-config/sources.json';
 
-    let imgURL = sources.meta;
-
     let currentPk = $state("...");
 
     let displayCardData = $state({});
     let srcImageLoader = $state("");
+    let srcFullDoc = $state("");
 
     let searchBarValue = $state("");
     
@@ -86,12 +85,18 @@
                     console.log(value[0]);
                     searchSuccess();
                     displayCardData = value[0];
-                    srcImageLoader = imgURL + "/" + displayCardData['thumbnail_filename'];
+                    srcImageLoader = sources.meta + "/" + displayCardData['thumbnail_filename'];
+                    srcFullDoc = sources.fullDoc + "/" + displayCardData['thumbnail_filename'].replace("pdf-thumbnail.webp", "pdf-archive.pdf")
                 },
                 (reason) => {
                     // failure
-                    searchFailure();
-                    console.log(`getCardPromise fail: ${reason}`);
+                    if (redirectModal) {
+                        console.info(`Ok getCardPromise fail since IndexedDB not loaded: ${reason}`);
+                    } else {
+                        searchFailure();
+                        console.error(`getCardPromise fail: ${reason}`);
+                    }
+                    
 
                 }
             );
@@ -217,20 +222,38 @@
             </p>
         </Column>
         <Column>
-            <div style="height: fit-content;">
+            <Button
+                kind="ghost"
+                on:click={() => {
+                    document.getElementById("imageThumbnail").style.display="none";
+                    document.getElementById("fullDocument").style.display="block";
+                }}
+            >
+                Load full QSL Card
+            </Button>
+            
+            <div style="height: fit-content;" id="imageThumbnail">
                 <ImageLoader
                     fadeIn
                     bind:src={srcImageLoader}
                 />
             </div>
+            <div style="height: fit-content; display:none;" id="fullDocument">
+                <object type="application/pdf" data="{srcFullDoc}" title="QSL Card Archive UPN {displayCardData['pk']}" width="800" height="500">
+                    <InlineNotification
+                        title="Error:"
+                        subtitle="Unable to load QSL Card."
+                    />
+                </object>
+            </div>
 
             <div>
                 <small>
                     <span style="font-weight: 500;">Full resolution - S3 URI (Requestor Pay Fee):</span> <br>
-                    <CodeSnippet
+                </small>
+                <CodeSnippet
                         code="{sources.s3}/{displayCardData['archive_filename']}"
                     />
-                </small>
                 <h2 style="padding-top: 40px;">Citation for URN {displayCardData['pk']}</h2>
                 <p class="column-text">
                     MLA

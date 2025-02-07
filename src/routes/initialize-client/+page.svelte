@@ -22,7 +22,9 @@
     let step02ProgressBar = $state("active");
     let step02ProgressBarLabel = $state("Loading...");
 
-    import { initialize, loadData } from '$lib/metadata.js'
+    import { initialize, loadData, resetDb } from '$lib/metadata.js'
+    import { page } from "$app/state";
+    import { onMount } from "svelte";
 
 
     function disclaimerApproved() {
@@ -104,6 +106,59 @@
         setTimeout(() => goto("/"), 5000)
 
     }
+
+
+
+    function checkParams() {
+        if (page.url.searchParams.has('reset')) {
+            console.debug("/initialize-client?reset requested full IndexedDb reset");
+
+            // Send new promise
+            const resetPromise = new Promise((resolve, reject) => {
+            try{
+                // Reset db
+                resetDb();
+
+                // Rest cookie
+                document.cookie = 'qslArchiveDataSet=; Max-Age=0';
+
+                // Reset page
+                initializeDisclaimerOpen = false;
+                initializeDisclaimerChecked = false;
+                document.getElementById("step01").style.display = "block";
+                document.getElementById("step02").style.display = "none";
+
+                resolve("OK");
+            }
+            catch (e) {
+                reject(e);
+            }
+        });
+
+        // Handle promise return
+        resetPromise.then(
+            (value) => {
+                // success
+                goto("/initialize-client");
+                console.log(`resetDb() done.`);
+            },
+            (reason) => {
+                // failure
+                step02ProgressBar="error";
+                step02ProgressBarLabel=`Error: Unable to reset IndexedDB, trying clearing browser data -  ${reason}`;
+
+            }
+        );
+
+        }   
+    }
+
+
+    onMount(() => {
+        checkParams();
+    });
+
+
 </script>
 
 <Grid>
