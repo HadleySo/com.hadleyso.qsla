@@ -37,7 +37,13 @@
         HeaderPanelLinks,
         HeaderPanelLink,
         HeaderPanelDivider,
-        Link
+        Link,
+        SideNav,
+        SideNavItems,
+        SideNavMenu,
+        SideNavMenuItem,
+        SideNavLink,
+        SideNavDivider,
     } from "carbon-components-svelte";
 
     import { expoIn } from "svelte/easing";
@@ -47,12 +53,12 @@
 		document.documentElement.setAttribute("theme", theme);
 	});
 
-    let isSideNavOpen = $state(false);
+    let isSideNavOpen = $state(true);
     let isOpen = $state(false);
     let { children } = $props();
 </script>
 
-<Header company="[Hadley So]" platformName="QSL Card Archive" bind:isSideNavOpen>
+<Header company="[Hadley So]" platformName="QSL Card Archive" bind:isSideNavOpen={isSideNavOpen} expandedByDefault={false}>
     <svelte:fragment slot="skip-to-content">
       <SkipToContent />
     </svelte:fragment>
@@ -92,6 +98,13 @@
         </HeaderAction>
     </HeaderUtilities>
 </Header>
+<SideNav bind:isOpen={isSideNavOpen}>
+    <SideNavItems>
+        <SideNavMenuItem href="/" text="Home" on:click={() => {isSideNavOpen=false}} />
+        <SideNavMenuItem href="/search" text="Metadata Search" on:click={() => {isSideNavOpen=false}} />
+        <SideNavMenuItem href="/urn" text="Card ID Reference" on:click={() => {isSideNavOpen=false}} />
+    </SideNavItems>
+  </SideNav>
 
 <style>
     .panel-footer {

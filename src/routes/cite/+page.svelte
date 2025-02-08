@@ -11,7 +11,7 @@
 <Grid>
     <Row>
         <Column>
-            <h1 style="padding-bottom: 40px;">Cite</h1>
+            <h1 style="padding-bottom: 20px;">Cite</h1>
             <p class="column-text">
                 MLA
             </p>
@@ -46,6 +46,8 @@
 <style>
     .column-text {
         /* max-width: 44rem; */
-        padding-bottom: 20px;
+        padding-bottom: 10px;
+        padding-top: 50px;
+
     }
 </style>
