@@ -11,11 +11,12 @@ Cards are fed though a duplex scanner, either a slower manual feed scanner for f
 Once scanned they are uploaded and metadata can be entered manually. We use [Paperless-ngx](https://github.com/paperless-ngx/paperless-ngx) for metadata entry.
 
 Every so often an export is run where all thumbnails are saved and data is exported to JSON. The JSON is reformatted and images and JSON files are uploaded. 
-Since the process is manual, there is a delay between scanning in cards and their avalibity online.
+Since the process is manual, there is a delay between scanning in cards and their availability online.
 
 ### Progress
 
-As of February 2025 we have about 3900 cards scanned in 200 cards with keyed in metadata.
+As of February 2025 we scanned in about 3,900 cards, and of those cards about 200 with keyed in metadata. 
+There is an estimated 21,450 cards in the collection.
 
 ### Access to Full Resolution
 
