@@ -26,6 +26,7 @@
     let displayCardData = $state({});
     let srcImageLoader = $state("");
     let srcFullDoc = $state("");
+    let srcFullDocHold = $state("");
 
     let searchBarValue = $state("");
     
@@ -86,7 +87,7 @@
                     searchSuccess();
                     displayCardData = value[0];
                     srcImageLoader = sources.meta + "/" + displayCardData['thumbnail_filename'];
-                    srcFullDoc = sources.fullDoc + "/" + displayCardData['thumbnail_filename'].replace("pdf-thumbnail.webp", "pdf-archive.pdf")
+                    srcFullDocHold = sources.fullDoc + "/" + displayCardData['thumbnail_filename'].replace("pdf-thumbnail.webp", "pdf-archive.pdf")
                 },
                 (reason) => {
                     // failure
@@ -212,7 +213,7 @@
                 <span class="label-text">Needs Processing:</span> {displayCardData['to_process']}
             </p>
             <p class="column-text" style="max-width: none;">
-                <span class="label-text">thumbnail_filename:</span> <code style="font-size:smaller">{displayCardData['thumbnail_filename']}</code>
+                <span class="label-text">thumbnail_filename:</span> <br><code style="font-size:smaller">{displayCardData['thumbnail_filename']}</code>
             </p>
             <p class="column-text" style="max-width: none;">
                 <span class="label-text">archive_filename:</span> <code style="font-size:smaller">{displayCardData['archive_filename']}</code>
@@ -227,6 +228,7 @@
                 on:click={() => {
                     document.getElementById("imageThumbnail").style.display="none";
                     document.getElementById("fullDocument").style.display="block";
+                    srcFullDoc = srcFullDocHold;
                 }}
             >
                 Load full QSL Card
@@ -236,7 +238,17 @@
                 <ImageLoader
                     fadeIn
                     bind:src={srcImageLoader}
-                />
+                >
+                    <svelte:fragment slot="loading">
+                        <InlineLoading />
+                      </svelte:fragment>
+                      <svelte:fragment slot="error">
+                        <InlineNotification
+                            title="Error:"
+                            subtitle="Unable to load thumbnail for QSL Card."
+                        />
+                      </svelte:fragment>
+                </ImageLoader>
             </div>
             <div style="height: fit-content; display:none;" id="fullDocument">
                 <object type="application/pdf" data="{srcFullDoc}" title="QSL Card Archive UPN {displayCardData['pk']}" width="800" height="500">
@@ -291,10 +303,11 @@
     .column-text {
         max-width: 44rem;
         padding-top: 10px;
+        font-size: small;
     }
     .label-text {
         font-weight: 600;
-        font-size: larger;
+        font-size: medium;
         margin-right: 15px;
     }
 </style>
