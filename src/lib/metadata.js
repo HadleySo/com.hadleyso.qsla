@@ -6,6 +6,11 @@ export async function initialize() {
     let needLoadData = false;
 
     try {
+
+        // Get columns to create indexes for
+        const res = await fetch(sources.meta + "/column-names.json");
+        var columns = await res.json();
+
         // Open the database
         const request = window.indexedDB.open(sources.dbName, sources.dbVersion);
 
@@ -26,13 +31,13 @@ export async function initialize() {
             const objectStore = db.createObjectStore("qslCardMeta", { keyPath: "pk" });
 
             // Add indexes
-            for (const column of sources.columns){
+            for (const column of columns['columns']){
                 objectStore.createIndex(column, column, { unique: false });
             }
 
             // Set flag to load data
             needLoadData = true;
-            console.log("Done initializing");
+            console.log("Done initializing, needLoadData true");
 
         };
 

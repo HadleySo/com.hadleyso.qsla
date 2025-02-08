@@ -375,3 +375,171 @@ export async function multiURN(pks) {
     });
 
 }
+
+/**
+ * Get available tags from IndexedDB
+ *
+ */
+export async function getTags() {
+
+    /**
+     * @type {any[][]}
+     */
+    var getTagsResult = [];
+
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    return new Promise(function(resolve, reject) {
+        try {
+            // Request DB
+            const request = window.indexedDB.open(sources.dbName, sources.dbVersion);
+            
+            // Handle errors
+            request.onerror = (event) => {
+                // @ts-ignore
+                console.error(`Unable to load getTags - error: ${event.target.error?.message}`);
+                reject("Unable to load getTags with event");
+                throw new Error('Unable to load getTags with event');
+            };
+    
+            // Handle upgrade event
+            request.onupgradeneeded =  function(event) {
+                console.error(`Unable to load getTags - UPGRADE needed`);
+                reject("Unable to load getTags - UPGRADE needed");
+                throw new Error('Unable to load getTags - UPGRADE needed');
+            };
+    
+            request.onsuccess = (event) => {
+                // @ts-ignore
+                const db = event.target.result;
+    
+    
+                const transaction = db.transaction(["qslCardMeta"], "readonly");
+                const objectStore = transaction.objectStore("qslCardMeta");
+
+                // CHECK THAT DB HAS CONTENT
+                var count = objectStore.count();
+                count.onsuccess = function() {
+                    console.log(`IndexedDB row count: ${count.result}`);
+                    if (count.result < 3000) {
+                        goto("/initialize-client?reset")
+                    }
+                }
+
+                // CATCH PROMISE WHEN TRANSACTION DONE
+                transaction.addEventListener("complete", (event) => {
+                    console.info(`searchFullInputKeys transaction was completed ${getTagsResult} ${event}`);
+                    resolve(getTagsResult);
+                });
+
+                const indexes = Array.from(objectStore.indexNames);
+                console.log(indexes);
+                const tags = indexes.filter((index) => index.startsWith("TAG_"));
+                getTagsResult = tags;
+            } 
+        } catch(e) {
+            console.error(e);
+            reject(`getTags unable to load data - ${e}`);
+            throw new Error('getTags unable to load data');
+        }
+    })
+}
+
+/**
+ * Wrapper to get all cards by tag
+ * 
+ * @param {String} tag
+ */
+export async function searchByTagWrap(tag) {
+    console.debug(`searchByTagWrap started: ${tag}`);
+
+    const value = await searchTag(tag);
+    let v = intersection(value);
+    let cardData =  multiURN(v);
+    return cardData;
+    
+}
+
+/**
+ * Get pk from a tag
+ * 
+ * @param {String} tag
+ */
+export async function searchTag(tag) {
+    /**
+     * @type {any[][]}
+     */
+    var searchKeyResults = [];
+    
+
+    return new Promise(function(resolve, reject) {
+        try {
+            // Request DB
+            const request = window.indexedDB.open(sources.dbName, sources.dbVersion);
+            
+            // Handle errors
+            request.onerror = (event) => {
+                // @ts-ignore
+                console.error(`Unable to load IndexedDB - error: ${event.target.error?.message}`);
+                reject("Unable to load IndexedDB with event");
+                throw new Error('Unable to load IndexedDB with event');
+            };
+    
+            // Handle upgrade event
+            request.onupgradeneeded =  function(event) {
+                console.error(`Unable to load IndexedDB - UPGRADE needed`);
+                reject("Unable to load IndexedDB - UPGRADE needed");
+                throw new Error('Unable to load IndexedDB - UPGRADE needed');
+            };
+    
+            request.onsuccess = (event) => {
+                // @ts-ignore
+                const db = event.target.result;
+    
+    
+                const transaction = db.transaction(["qslCardMeta"], "readonly");
+                const objectStore = transaction.objectStore("qslCardMeta");
+
+                // CHECK THAT DB HAS CONTENT
+                var count = objectStore.count();
+                count.onsuccess = function() {
+                    console.log(`IndexedDB row count: ${count.result}`);
+                    if (count.result < 3000) {
+                        goto("/initialize-client?reset")
+                    }
+                }
+    
+                // CATCH PROMISE WHEN TRANSACTION DONE
+                transaction.addEventListener("complete", (event) => {
+                    console.info(`searchByTagWrap transaction was completed ${searchKeyResults} ${event}`);
+                    resolve([searchKeyResults]);
+                });
+                
+                // SEARCH TAG
+                // SAVE PRIMARY KEYS FOUND
+                const readIndex = objectStore.index(tag);
+                const fromCallRange = IDBKeyRange.only("true")
+
+                console.debug(`RangeValue ${tag} - next starting cursor`);
+                readIndex.openKeyCursor(fromCallRange).onsuccess = (event) => {
+                    const cursor = event.target.result;
+                    if (cursor) {
+                        searchKeyResults.push(cursor.primaryKey);
+                        console.debug(`RangeValue cursor found entry: ${cursor.primaryKey} `);
+                        cursor.continue();
+                    } 
+                };
+        
+    
+            };
+    
+    
+    
+        } catch(e) {
+            console.error(e);
+            reject(`IndexedDb unable to load data - ${e}`);
+            throw new Error('IndexedDb unable to load data');
+        }
+    
+    });
+}

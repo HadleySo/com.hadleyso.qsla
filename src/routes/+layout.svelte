@@ -65,6 +65,7 @@
         <HeaderNavItem href="/" text="/" />
         <HeaderNavItem href="/search" text="Metadata Search" />
         <HeaderNavItem href="/urn" text="Card ID Reference" />
+        <HeaderNavItem href="/tags" text="Tags" />
     </HeaderNav>
 
     <HeaderUtilities>
@@ -102,6 +103,7 @@
         <SideNavMenuItem href="/" text="Home" on:click={() => {isSideNavOpen=false}} />
         <SideNavMenuItem href="/search" text="Metadata Search" on:click={() => {isSideNavOpen=false}} />
         <SideNavMenuItem href="/urn" text="Card ID Reference" on:click={() => {isSideNavOpen=false}} />
+        <SideNavMenuItem href="/tags" text="Tags" on:click={() => {isSideNavOpen=false}} />
     </SideNavItems>
   </SideNav>
 
