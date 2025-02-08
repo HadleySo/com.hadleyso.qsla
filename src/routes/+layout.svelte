@@ -40,13 +40,12 @@
         Link,
         SideNav,
         SideNavItems,
-        SideNavMenu,
         SideNavMenuItem,
-        SideNavLink,
-        SideNavDivider,
+        TooltipIcon,
     } from "carbon-components-svelte";
 
     import { expoIn } from "svelte/easing";
+    import { Launch } from "carbon-icons-svelte";
 
     let theme = $state("g90");
     $effect(() => {
@@ -74,16 +73,16 @@
             <HeaderPanelLinks>
                 <HeaderPanelDivider>About the Project</HeaderPanelDivider>
                 <HeaderPanelLink><Link href="/about">The Project</Link></HeaderPanelLink>
-                <HeaderPanelLink><Link href="https://hadleyso.com/gxr/2024/qsl-cards.html" target="_blank">How it started</Link></HeaderPanelLink>
-                <HeaderPanelLink><Link href="https://w9yt.rso.engr.wisc.edu/" target="_blank">UW Madison BARS</Link></HeaderPanelLink>
+                <HeaderPanelLink><Link href="https://hadleyso.com/gxr/2024/qsl-cards.html" target="_blank">How it started &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
+                <HeaderPanelLink><Link href="https://w9yt.rso.engr.wisc.edu/" target="_blank">UW Madison BARS  &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
                 <HeaderPanelLink><Link href="/contact">Contact</Link></HeaderPanelLink>
                 <HeaderPanelDivider>Contribute</HeaderPanelDivider>
                 <HeaderPanelLink><Link href="/metadata-contribute">Metadata</Link></HeaderPanelLink>
-                <HeaderPanelLink><Link href="https://github.com/HadleySo/com.hadleyso.qsla">GitHub</Link></HeaderPanelLink>
-                <HeaderPanelLink><Link href="https://buymeacoffee.com/hadleyso" target="_blank">Donate</Link></HeaderPanelLink>
+                <HeaderPanelLink><Link href="https://github.com/HadleySo/com.hadleyso.qsla">GitHub &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
+                <HeaderPanelLink><Link href="https://buymeacoffee.com/hadleyso" target="_blank">Donate &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
                 <HeaderPanelDivider>Credit</HeaderPanelDivider>
-                <HeaderPanelLink><Link href="https://hadleyso.com/" target="_blank">Hadley So</Link></HeaderPanelLink>
-                <HeaderPanelLink><Link href="https://w9yt.rso.engr.wisc.edu/" target="_blank">UW Madison BARS</Link></HeaderPanelLink>
+                <HeaderPanelLink><Link href="https://hadleyso.com/" target="_blank">Hadley So &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
+                <HeaderPanelLink><Link href="https://w9yt.rso.engr.wisc.edu/" target="_blank">UW Madison BARS &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
                 <HeaderPanelLink><Link href="/cite">Cite this project</Link></HeaderPanelLink>
                 <HeaderPanelDivider>Debug</HeaderPanelDivider>
                 <HeaderPanelLink><Link href="/initialize-client?reset">Reset IndexedDB</Link></HeaderPanelLink>

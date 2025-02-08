@@ -14,11 +14,13 @@
     import { browser } from '$app/environment';
     import { getCookie } from "$lib/cookie.js";
     import {
-        goto
+        goto 
     } from '$app/navigation';
     import { page } from '$app/state';
     import { multiURN } from '$lib/search.js'
 	import { onMount } from 'svelte';
+    import { Search as SearchIcon } from "carbon-icons-svelte";
+
     import sources from '$lib/metadata-config/sources.json';
 
     let currentPk = $state("...");
@@ -153,7 +155,7 @@
         <Column>
             <Search placeholder="URN / Card ID..." bind:value={searchBarValue} />
             <br>
-            <Button kind="secondary" size="field" on:click={() => searchSubmit()} >Search</Button>
+            <Button kind="secondary" size="field" on:click={() => searchSubmit()} icon={SearchIcon} >Search</Button>
         </Column>
     </Row>
     <Row id="errorMessage" style="display:none;">
@@ -229,7 +231,9 @@
                     document.getElementById("imageThumbnail").style.display="none";
                     document.getElementById("fullDocument").style.display="block";
                     srcFullDoc = srcFullDocHold;
+                    document.getElementById("loadFullButton").style.display="none";
                 }}
+                id="loadFullButton"
             >
                 Load full QSL Card
             </Button>
@@ -254,19 +258,19 @@
                 <object type="application/pdf" data="{srcFullDoc}" title="QSL Card Archive UPN {displayCardData['pk']}" width="800" height="500">
                     <InlineNotification
                         title="Error:"
-                        subtitle="Unable to load QSL Card."
+                        subtitle="Unable to load QSL Card. Please check your browser permissions."
                     />
                 </object>
             </div>
 
-            <div>
+            <div style="padding-top: 30px;">
                 <small>
                     <span style="font-weight: 500;">Full resolution - S3 URI (Requestor Pay Fee):</span> <br>
                 </small>
                 <CodeSnippet
                         code="{sources.s3}/{displayCardData['archive_filename']}"
                     />
-                <h2 style="padding-top: 40px;">Citation for URN {displayCardData['pk']}</h2>
+                <h3 style="padding-top: 40px;">Cite URN {displayCardData['pk']}</h3>
                 <p class="column-text">
                     MLA
                 </p>

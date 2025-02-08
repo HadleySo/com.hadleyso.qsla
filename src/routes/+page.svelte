@@ -4,12 +4,16 @@
         Grid,
         Row,
         Column,
-        Tabs, Tab, TabContent,
-        ButtonSet
+        Tabs, 
+        Tab, 
+        TabContent,
+        ButtonSet,
+        Tooltip,
     } from "carbon-components-svelte";
     import {
         goto
     } from '$app/navigation';
+    import { SearchAdvanced, NotebookReference, Launch } from "carbon-icons-svelte";
 </script>
 
 <Grid>
@@ -32,9 +36,9 @@
     <Row>
         <Column style="padding-top: 60px;">     
             <ButtonSet>
-                <Button kind="primary" on:click={() => {goto("/search")}}>Search</Button>
+                <Button kind="primary" on:click={() => {goto("/search")}} icon={SearchAdvanced}>Search</Button>
                 <Button kind="secondary" on:click={() => {goto("/getting-started")}}>Explore QSL Cards</Button>
-                <Button kind="secondary" on:click={() => {goto("/cite")}}>Credit / Cite this</Button>
+                <Button kind="secondary" on:click={() => {goto("/cite")}} icon={NotebookReference}>Credit / Cite this</Button>
             </ButtonSet>
 
 
@@ -48,6 +52,11 @@
                 <Tab label="What Metadata is Avalible?" />
                 <svelte:fragment slot="content">
                     <TabContent>
+                        <Tooltip triggerText="Wikipedia contributors" align="start">
+                            <p>
+                                Wikipedia contributors. (2024, May 11). QSL card. In Wikipedia, The Free Encyclopedia. Retrieved February 2025, from https://en.wikipedia.org/w/index.php?title=QSL_card&oldid=1223324139 
+                            </p>
+                        </Tooltip>
                         <p class="column-text">
                             Amateur radio operators exchange QSL cards to confirm two-way radio contact between stations. 
                             Each card contains details about one or more contacts, the station and its operator.<br>
@@ -63,7 +72,7 @@
                             The FCC-issued callsign, W9YT, now held by the Badger Amateur Radio Society (aka BARS) has been in use at the 
                             University of Wisconsin-Madison since 1930.
                         </p>
-                        <Button kind="tertiary" on:click={() => window.location.href = 'https://w9yt.rso.engr.wisc.edu/'}>BARS Website</Button>
+                        <Button kind="tertiary" on:click={() => window.location.href = 'https://w9yt.rso.engr.wisc.edu/'} icon={Launch}>BARS Website</Button>
                     </TabContent>
                     <TabContent>
                         <p class="column-text">

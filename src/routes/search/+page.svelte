@@ -20,9 +20,7 @@
         Toolbar,
         Pagination,
         DataTableSkeleton,
-
-        Link
-
+        Link,
     } from "carbon-components-svelte";
     import {
         goto
@@ -34,7 +32,7 @@
 
     import { searchFormWrap } from '$lib/search.js'
     import { getCookie } from "$lib/cookie.js";
-    import { Launch } from "carbon-icons-svelte";
+    import { Launch, SearchAdvanced } from "carbon-icons-svelte";
 
     let from_call = $state("");
     let to_call = $state("");
@@ -238,7 +236,7 @@
 
                 <br style="margin-top: 40px;">
 
-                <Button type="submit" id="step01">Submit</Button>
+                <Button type="submit" id="step01" icon={SearchAdvanced}>Search</Button>
             </Form>
         </Column>
     </Row>

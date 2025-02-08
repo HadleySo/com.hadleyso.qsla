@@ -25,6 +25,7 @@
     import { initialize, loadData, resetDb } from '$lib/metadata.js'
     import { page } from "$app/state";
     import { onMount } from "svelte";
+    import { Package } from "carbon-icons-svelte";
 
 
     function disclaimerApproved() {
@@ -181,7 +182,7 @@
             <p class="column-text">
                 To begin, click the button below.
             </p>
-            <Button kind="tertiary" on:click={() => {initializeDisclaimerOpen = true}}>Load & Initialize</Button>
+            <Button kind="tertiary" on:click={() => {initializeDisclaimerOpen = true}} icon={Package}>Load & Initialize</Button>
 
         </Column>
     </Row>
