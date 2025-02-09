@@ -23,12 +23,16 @@
                 options are always available at the top menu.
             </p>
             <p class="column-text">
-                The easiest way to start is to search by US State first, select 1 to 3 states and see what
-                comes up. If there is a country that you want to explore, start there!
+                The easiest way to start is to look at tags and explore cards with interesting tags.
             </p>
-
             <Button
                 kind="primary"
+                on:click={() => {
+                    goto("/tags");
+                }}>Explore Tags</Button
+            >
+            <Button
+                kind="secondary"
                 on:click={() => {
                     goto("/search");
                 }}>Metadata Search</Button

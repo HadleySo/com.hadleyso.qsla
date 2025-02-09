@@ -148,14 +148,14 @@
 <Grid>
     <Row>
         <Column>
-            <h1 style="padding-bottom: 40px;">Card ID Reference</h1>
+            <h1 style="padding-bottom: 40px;">Retrieve URN</h1>
         </Column>
     </Row>
     <Row id="searchBar">
         <Column>
-            <Search placeholder="URN / Card ID..." bind:value={searchBarValue} />
+            <Search placeholder="URN..." bind:value={searchBarValue} />
             <br>
-            <Button kind="secondary" size="field" on:click={() => searchSubmit()} icon={SearchIcon} >Search</Button>
+            <Button kind="secondary" size="field" on:click={() => searchSubmit()} icon={SearchIcon} >Retrieve</Button>
         </Column>
     </Row>
     <Row id="errorMessage" style="display:none;">

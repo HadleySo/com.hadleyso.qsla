@@ -54,7 +54,7 @@
         <Column>
             <h1 style="padding-bottom: 40px;">Tags</h1>
             <p class="column-text">
-                QSL Cards that have been processed may have tag assigned to them. Below is a list of available tags. 
+                QSL Cards may have tag assigned to them, even before they are processed. Below is a list of available tags. 
                 Click on a tag to view cards with that tag.
             </p>
         </Column>
