@@ -50,6 +50,10 @@
     });
 
     function runTagSearch() {
+
+        document.getElementById("dataTableReal").style.display = "none";
+        document.getElementById("dataTableFake").style.display = "block";
+
         // Send new promise
         const tagRetrievePromise = new Promise((resolve, reject) => {
         try{
@@ -64,6 +68,9 @@
         tagRetrievePromise.then(
             (value) => {
                 // success
+                document.getElementById("dataTableReal").style.display = "block";
+                document.getElementById("dataTableFake").style.display = "none";
+
                 console.log(`searchPromise done ${value}`);
                 rows = value;
             },
@@ -101,7 +108,7 @@
                 expandable
                 headers={sources.tableHeaders}
                 {pageSize}
-                {pageStat}
+                bind:page={pageStat}
                 id="dataTableReal"
                 bind:rows={rows}
             >
