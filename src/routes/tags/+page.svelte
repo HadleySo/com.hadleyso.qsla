@@ -19,7 +19,7 @@
     if (browser) {
         if (getCookie(document.cookie, "qslArchiveDataSet") == null) {
             redirectModal = true;
-            setTimeout(() => goto("/initialize-client"), 5000)
+            setTimeout(() => goto("/initialize-client?origin=%2Ftags"), 5000)
         }
     }
     // Send new promise

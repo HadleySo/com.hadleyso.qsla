@@ -9,12 +9,15 @@
         ModalBody,
         ModalFooter,
         Checkbox,
-        InlineNotification
+        InlineNotification,
+        InlineLoading
     } from "carbon-components-svelte";
     import { browser } from '$app/environment';
     import {
         goto
     } from '$app/navigation';
+
+    let destinationURL = $state("/");
 
     let initializeDisclaimerChecked = $state(false);
     let initializeDisclaimerOpen = $state(false);
@@ -104,13 +107,19 @@
             expiration_date.setFullYear(expiration_date.getFullYear() + 1);
             document.cookie = "qslArchiveDataSet=true; path=/; expires=" + expiration_date.toUTCString();
         }
-        setTimeout(() => goto("/"), 5000)
+        document.getElementById("stepRedirect").style.display = "block";
+        setTimeout(() => goto(destinationURL), 5000)
 
     }
 
 
 
     function checkParams() {
+        if (page.url.searchParams.has('origin')) {
+            destinationURL = decodeURI(page.url.searchParams.get('origin'));
+            console.debug(`New post initialize destination set ${destinationURL}`);
+        }
+
         if (page.url.searchParams.has('reset')) {
             console.debug("/initialize-client?reset requested full IndexedDb reset");
 
@@ -190,6 +199,9 @@
         <Column>
             <ProgressBar bind:helperText={step02ProgressBarLabel} bind:status={step02ProgressBar} />
         </Column>
+    </Row>
+    <Row id="stepRedirect" style="display:none; margin-top: 20px;">
+        <InlineLoading description="Redirecting..." /> 
     </Row>
 </Grid>
 <span>

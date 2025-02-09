@@ -33,12 +33,7 @@
     let searchBarValue = $state("");
     
     let redirectModal = $state(false);
-    if (browser) {
-        if (getCookie(document.cookie, "qslArchiveDataSet") == null) {
-            redirectModal = true;
-            setTimeout(() => goto("/initialize-client"), 5000)
-        }
-    }
+
 
     function searchFailure() {
         document.getElementById("searchBar").style.display = "none";
@@ -61,12 +56,6 @@
     }
     
     function reMountRender() {
-        if (page.url.searchParams.has('pk')) {
-            currentPk = page.url.searchParams.get('pk');
-        } else if(arguments.length === 1) {
-            currentPk = arguments[0];
-        } 
-
         if (page.url.searchParams.has('pk') || arguments.length === 1) {
 
             // Send new promise
@@ -138,6 +127,16 @@
     }
 
     onMount(() => {
+        if (page.url.searchParams.has('pk')) {
+            currentPk = page.url.searchParams.get('pk');
+        } 
+
+        if (browser) {
+            if (getCookie(document.cookie, "qslArchiveDataSet") == null) {
+                redirectModal = true;
+                setTimeout(() => goto("/initialize-client?origin=%2Furn%3Fpk%3D"+currentPk), 5000)
+            }
+        }
         reMountRender();
     });
 

@@ -31,12 +31,7 @@
     let redirectModal = $state(false);
     let tag = $state("");
 
-    if (browser) {
-        if (getCookie(document.cookie, "qslArchiveDataSet") == null) {
-            redirectModal = true;
-            setTimeout(() => goto("/initialize-client"), 5000)
-        }
-    }
+
 
     onMount(() => {
         if (page.url.searchParams.has('t')) {
@@ -45,6 +40,12 @@
             
         } else {
             goto("/tags");
+        }
+        if (browser) {
+            if (getCookie(document.cookie, "qslArchiveDataSet") == null) {
+                redirectModal = true;
+                setTimeout(() => goto("/initialize-client?origin=%2Ftag%3Ft%3D"+tag), 5000)
+            }
         }
         
     });

@@ -63,7 +63,7 @@
     if (browser) {
         if (getCookie(document.cookie, "qslArchiveDataSet") == null) {
             redirectModal = true;
-            setTimeout(() => goto("/initialize-client"), 5000)
+            setTimeout(() => goto("/initialize-client?origin=%2Fsearch"), 5000)
         }
     }
 
