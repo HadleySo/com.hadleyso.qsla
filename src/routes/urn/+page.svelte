@@ -36,9 +36,11 @@
 
 
     function searchFailure() {
+        console.debug("searchFailure() called in urn");
         document.getElementById("searchBar").style.display = "none";
         document.getElementById("errorMessage").style.display = "block";
         document.getElementById("infoArea").style.display = "none";
+        console.log(`STATUS STYLE OF ERROR MSG: ${document.getElementById("errorMessage").style.display}`)
 
     }
 
@@ -48,15 +50,30 @@
     }
 
     function resetPage() {
-        goto("/urn");
+        // if resetPage called by closing error message
+        if (arguments.length === 1) {
+            arguments[0].preventDefault();
+        }
+        console.debug("resetPage() called in urn");
         document.getElementById("searchBar").style.display = "block";
         document.getElementById("errorMessage").style.display = "none";
         document.getElementById("infoArea").style.display = "none";
+        goto("/urn");
 
     }
     
     function reMountRender() {
         if (page.url.searchParams.has('pk') || arguments.length === 1) {
+
+            
+            if (page.url.searchParams.has('pk')) {
+                // If function is called because of direct link
+                currentPk = page.url.searchParams.get('pk');
+            } else if (arguments.length === 1) {
+                // If function is called because of form submit onclick
+                currentPk = arguments[0];
+            }
+            
 
             // Send new promise
             const getCardPromise = new Promise((resolve, reject) => {
@@ -73,8 +90,7 @@
             getCardPromise.then(
                 (value) => {
                     // success
-                    console.log(`getCardPromise done: ${value[0]}`);
-                    console.log(value[0]);
+                    console.info(`getCardPromise done in reMountRender(): ${value[0]}`);
                     searchSuccess();
                     displayCardData = value[0];
                     srcImageLoader = sources.meta + "/" + displayCardData['thumbnail_filename'];
@@ -93,8 +109,7 @@
                 }
             );
 
-            const cardData =  multiURN([page.url.searchParams.get('pk')]);
-            console.log(`Got PK URN ${cardData}`);
+            console.debug(`Got PK URN reMountRender()`);
         }
 
     }
@@ -161,8 +176,8 @@
         <Column>
             <InlineNotification
                 title="Error:"
-                subtitle="The URN you entered does not exist. PK: {currentPk}"
-                on:close={() => resetPage()}
+                subtitle="The URN you entered does not exist. {currentPk}"
+                on:close={(e) => resetPage(e)}
             />
           
         </Column>
