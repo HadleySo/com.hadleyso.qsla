@@ -1,3 +1,6 @@
+<svelte:head>
+    <title>Metadata Contributions | QSL Card Archive | Hadley So</title>
+</svelte:head>
 <script>
     import { goto } from "$app/navigation";
     import {

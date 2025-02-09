@@ -1,3 +1,6 @@
+<svelte:head>
+    <title>Tag{tag.replace("TAG_", " ")} | QSL Card Archive | Hadley So</title>
+</svelte:head>
 <script>
     import {
         Grid,
@@ -154,16 +157,3 @@
     <br><br>
     <InlineLoading description="Redirecting..." />
 </Modal>
-
-<style>
-    .column-text {
-        max-width: 44rem;
-        padding-top: 10px;
-        font-size: small;
-    }
-    .label-text {
-        font-weight: 600;
-        font-size: medium;
-        margin-right: 15px;
-    }
-</style>

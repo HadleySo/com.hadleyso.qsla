@@ -1,3 +1,6 @@
+<svelte:head>
+    <title>Cite | QSL Card Archive | Hadley So</title>
+</svelte:head>
 <script>
     import {
         Grid,

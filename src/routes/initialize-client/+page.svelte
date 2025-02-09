@@ -1,3 +1,6 @@
+<svelte:head>
+    <title>Initialize Client | QSL Card Archive | Hadley So</title>
+</svelte:head>
 <script>
     import {
         Button,

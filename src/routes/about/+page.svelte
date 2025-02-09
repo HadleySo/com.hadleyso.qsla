@@ -1,3 +1,6 @@
+<svelte:head>
+    <title>About | QSL Card Archive | Hadley So</title>
+</svelte:head>
 <script>
     import { Grid, Row, Column, CodeSnippet } from "carbon-components-svelte";
 </script>

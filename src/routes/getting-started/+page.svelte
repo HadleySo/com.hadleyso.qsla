@@ -1,3 +1,6 @@
+<svelte:head>
+    <title>Getting Started | QSL Card Archive | Hadley So</title>
+</svelte:head>
 <script>
     import {
         Button,
@@ -145,9 +148,5 @@
     .column-text {
         max-width: 44rem;
         padding-bottom: 20px;
-    }
-    .nested-link {
-        color: inherit;
-        text-decoration: inherit;
     }
 </style>

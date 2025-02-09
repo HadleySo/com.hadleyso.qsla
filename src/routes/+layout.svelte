@@ -1,22 +1,4 @@
 <svelte:head>
-    <link rel="icon" type="image/x-icon" href="https://static.hadleyso.com/favicon/favicon.ico">
-    <title>QSL Card Archive | qsla.hadleyso.com | Hadley So</title>
-    <meta name="title" content="QSL Card Archive | qsla.hadleyso.com | Hadley So" />
-    <meta name="description" content="QSL cards from UW-Madison Badger Amateur Radio Society" />
-    <meta name="author" content="Hadley So">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://qsla.hadleyso.com/" />
-    <meta property="og:title" content="QSL Card Archive | qsla.hadleyso.com | Hadley So" />
-    <meta property="og:description" content="QSL cards from UW-Madison Badger Amateur Radio Society" />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://qsla.hadleyso.com//" />
-    <meta property="twitter:title" content="QSL Card Archive | qsla.hadleyso.com | Hadley So" />
-    <meta property="twitter:description" content="QSL cards from UW-Madison Badger Amateur Radio Society" />
-
 </svelte:head>
 
 <script>

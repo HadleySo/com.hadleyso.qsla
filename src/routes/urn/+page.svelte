@@ -1,3 +1,6 @@
+<svelte:head>
+    <title>URN{currentPk} | QSL Card Archive | Hadley So</title>
+</svelte:head>
 <script>
     import {
         Grid,
@@ -23,7 +26,7 @@
 
     import sources from '$lib/metadata-config/sources.json';
 
-    let currentPk = $state("...");
+    let currentPk = $state("");
 
     let displayCardData = $state({});
     let srcImageLoader = $state("");
