@@ -62,7 +62,6 @@
                 <HeaderPanelDivider>Contribute</HeaderPanelDivider>
                 <HeaderPanelLink><Link href="/metadata-contribute">Metadata</Link></HeaderPanelLink>
                 <HeaderPanelLink><Link href="https://github.com/HadleySo/com.hadleyso.qsla">GitHub &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
-                <HeaderPanelLink><Link href="https://buymeacoffee.com/hadleyso" target="_blank">Donate &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
                 <HeaderPanelDivider>Credit</HeaderPanelDivider>
                 <HeaderPanelLink><Link href="https://hadleyso.com/" target="_blank">Hadley So &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
                 <HeaderPanelLink><Link href="https://w9yt.rso.engr.wisc.edu/" target="_blank">UW Madison BARS &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>

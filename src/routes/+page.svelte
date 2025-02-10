@@ -24,15 +24,12 @@
         <Column>
             <h1 style="padding-bottom: 40px;">QSL Card Archive</h1>
             <p class="column-text" style="font-size: 20px; font-weight: 400;">
-                The QSL Card Archive is one of my side projects, archiving and preserving the 60+ years of QSL cards
-                recived by UW-Madison's Badger Amateur Radio Society from around the world.
+                The QSL Card Archive is one of my projects, archiving and preserving the 21,000 plus 
+                 QSL cards received by UW-Madison's Badger Amateur Radio Society over the past 60
+                 years from around the world.
             </p>
             <p class="column-text">
-                This is a self funded project, if you would like to donate financially or with your time, please 
-                reach out, it would be much appreciated.
-            </p>
-            <p class="column-text">
-                To learn more about this project, click the menu button in the top right corner.
+                To learn more about this project or to contribute, open the menu in the top right.
             </p>
         </Column>
     </Row>

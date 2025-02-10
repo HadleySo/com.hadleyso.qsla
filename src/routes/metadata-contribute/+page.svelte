@@ -38,7 +38,7 @@
         <Column>
             <ButtonSet>
                 <Button kind="primary" on:click={() => {goto("/contact")}}>Contact</Button>
-                <Button kind="secondary" on:click={() => {goto("https://bars-qsl.hadleyso.com/dashboard")}}>Metadata Keying Platform</Button>
+                <Button kind="secondary" on:click={() => {window.location="https://bars-qsl.hadleyso.com/dashboard"}}>Metadata Keying Platform</Button>
             </ButtonSet>
 
         </Column>
