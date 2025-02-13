@@ -281,13 +281,18 @@
             </div>
 
             <div style="padding-top: 30px;">
+                <p>
+                    QSL Card URN {displayCardData['pk']} may be copyright by their creator(s) in their respective countries.
+                    Metadata provided may be incorrect, missing, or inaccurate and should not be used to determine copyright.
+                </p>
+                <br><br>
                 <small>
                     <span style="font-weight: 500;">Full resolution - S3 URI (Requestor Pay Fee):</span> <br>
                 </small>
                 <CodeSnippet
                         code="{sources.s3}/{displayCardData['archive_filename']}"
                     />
-                <h3 style="padding-top: 40px;">Cite URN {displayCardData['pk']}</h3>
+                <h3 style="padding-top: 40px;">Reference URN {displayCardData['pk']}</h3>
                 <p class="column-text">
                     MLA
                 </p>

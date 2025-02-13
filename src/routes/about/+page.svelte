@@ -10,13 +10,13 @@
         <Column>
             <h1 style="padding-bottom: 40px;">About the Project</h1>
             <p class="column-text">
-                The QSL Card Archive is part of a project to archive and
-                preserve the 60+ years of QSL cards received by UW-Madison's
+                The QSL Card Archive is part of a project to archive,
+                preserve, and document the 60+ years of QSL cards received by UW-Madison's
                 Badger Amateur Radio Society from around the world. This
                 repository and qsla.HadleySo.com is a way to make the collection
                 searchable.
                 <br /><br />
-                There are cards from at the 1950s and possibly earlier, and from
+                There are cards from the 1950s and possibly earlier, and
                 countries that no longer exist.
             </p>
             <h2>How Cards are Processed</h2>

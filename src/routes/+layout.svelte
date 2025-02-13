@@ -53,29 +53,32 @@
     <HeaderUtilities>
 
         <HeaderAction bind:isOpen transition={{duration: 600, delay: 50, easing: expoIn}}>
-            <HeaderPanelLinks>
-                <HeaderPanelDivider>About the Project</HeaderPanelDivider>
-                <HeaderPanelLink><Link href="/about">The Project</Link></HeaderPanelLink>
-                <HeaderPanelLink><Link href="https://hadleyso.com/gxr/2024/qsl-cards.html" target="_blank">How it started &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
-                <HeaderPanelLink><Link href="https://w9yt.rso.engr.wisc.edu/" target="_blank">UW Madison BARS  &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
-                <HeaderPanelLink><Link href="/contact">Contact</Link></HeaderPanelLink>
-                <HeaderPanelDivider>Contribute</HeaderPanelDivider>
-                <HeaderPanelLink><Link href="/metadata-contribute">Metadata</Link></HeaderPanelLink>
-                <HeaderPanelLink><Link href="https://github.com/HadleySo/com.hadleyso.qsla">GitHub &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
-                <HeaderPanelDivider>Credit</HeaderPanelDivider>
-                <HeaderPanelLink><Link href="https://hadleyso.com/" target="_blank">Hadley So &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
-                <HeaderPanelLink><Link href="https://w9yt.rso.engr.wisc.edu/" target="_blank">UW Madison BARS &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
-                <HeaderPanelLink><Link href="/cite">Cite this project</Link></HeaderPanelLink>
-                <HeaderPanelDivider>Debug</HeaderPanelDivider>
-                <HeaderPanelLink><Link href="/initialize-client?reset">Reset IndexedDB</Link></HeaderPanelLink>
-                <HeaderPanelDivider>Copyright</HeaderPanelDivider>
-                <div class="panel-footer">
-                    Copyright © 2024-2025 <a href="https://hadleyso.com/" style="text-decoration: none; color: inherit;">Hadley So</a> or affiliates. All rights reserved. <br><br>
-                    Attribution to University of Wisconsin-Madison Badger Amateur Radio Society. <br><br>
-                    This project, site, and contents are not affiliated with the University of Wisconsin-Madison, the University of Wisconsin system, or the Badger Amateur Radio Society.
-                </div>
-                
-            </HeaderPanelLinks>
+            <div style="overflow-y: scroll; height: 100%;">
+                <HeaderPanelLinks>
+                    <HeaderPanelDivider>About the Project</HeaderPanelDivider>
+                    <HeaderPanelLink><Link href="/about">The Project</Link></HeaderPanelLink>
+                    <HeaderPanelLink><Link href="https://hadleyso.com/gxr/2024/qsl-cards.html" target="_blank">How it started &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
+                    <HeaderPanelLink><Link href="https://w9yt.rso.engr.wisc.edu/" target="_blank">UW Madison BARS  &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
+                    <HeaderPanelLink><Link href="/contact">Contact</Link></HeaderPanelLink>
+                    <HeaderPanelDivider>Contribute</HeaderPanelDivider>
+                    <HeaderPanelLink><Link href="/metadata-contribute">Metadata</Link></HeaderPanelLink>
+                    <HeaderPanelLink><Link href="https://github.com/HadleySo/com.hadleyso.qsla">GitHub &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
+                    <HeaderPanelDivider>Credit</HeaderPanelDivider>
+                    <HeaderPanelLink><Link href="https://hadleyso.com/" target="_blank">Hadley So &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
+                    <HeaderPanelLink><Link href="https://w9yt.rso.engr.wisc.edu/" target="_blank">UW Madison BARS &emsp13;<TooltipIcon tooltipText="Open external link."icon={Launch}/></Link></HeaderPanelLink>
+                    <HeaderPanelLink><Link href="/cite">Cite this project</Link></HeaderPanelLink>
+                    <HeaderPanelDivider>Debug</HeaderPanelDivider>
+                    <HeaderPanelLink><Link href="/initialize-client?reset">Reset IndexedDB</Link></HeaderPanelLink>
+                    <HeaderPanelDivider>Copyright</HeaderPanelDivider>
+                    <div class="panel-footer">
+                        Copyright © 2024-2025 <a href="https://hadleyso.com/" style="text-decoration: none; color: inherit;">Hadley So</a> or affiliates. All rights reserved. <br><br>
+                        QSL Cards are presented for nonprofit, educational, and commentary purposes. QSL Cards may be copyright by their creator(s) in their respective countries. <br><br>
+                        Attribution to University of Wisconsin-Madison Badger Amateur Radio Society. <br><br>
+                        This project, site, and contents are not affiliated with the University of Wisconsin-Madison, the University of Wisconsin system, or the Badger Amateur Radio Society.
+                    </div>
+                    
+                </HeaderPanelLinks>
+            </div>
         </HeaderAction>
     </HeaderUtilities>
 </Header>

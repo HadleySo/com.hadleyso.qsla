@@ -15,7 +15,8 @@
     <Row>
         <Column>
             <h1 style="padding-bottom: 20px;">Cite</h1>
-            <p class="column-text">
+            <h3 style="padding-bottom: 10px;">The Project</h3>
+            <p>
                 MLA
             </p>
             <CodeSnippet type="single" 
@@ -35,6 +36,11 @@
                 code="So, H., Culek, S., & Winer, N. (2025). QSL Card Archive [Collection]. QSL Card Archive of University of Wisconsin-Madison Badger Amateur Radio Society. https://qsla.hadleyso.com "
             />
 
+            <h3 style="padding-top: 50px; padding-bottom: 10px;">Specific QSL Cards</h3>
+            <p style="max-width: 44rem;">
+                QSL Cards are presented for nonprofit, educational, and commentary purposes. QSL Cards may be copyright by their creator(s) in their respective countries.
+                 Metadata provided may be incorrect, missing, or inaccurate and should not be used to determine copyright.
+            </p>
 
         </Column>
     </Row>
