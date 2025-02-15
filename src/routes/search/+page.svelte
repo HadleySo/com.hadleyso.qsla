@@ -24,6 +24,12 @@
         Pagination,
         DataTableSkeleton,
         Link,
+        ImageLoader,
+        InlineNotification,
+        Tile,
+        ContentSwitcher,
+        Switch,
+        SkeletonPlaceholder
     } from "carbon-components-svelte";
     import {
         goto
@@ -84,6 +90,7 @@
             date_utc: "...",
             country: "...",
             us_canada_region: "...",
+            thumbnail_filename: "",
         },
         {
             id: "b",
@@ -93,6 +100,7 @@
             date_utc: "...",
             country: "...",
             us_canada_region: "...",
+            thumbnail_filename: "",
         },
         {
             id: "c",
@@ -102,6 +110,7 @@
             date_utc: "...",
             country: "...",
             us_canada_region: "...",
+            thumbnail_filename: "",
         },
         {
             id: "d",
@@ -111,6 +120,7 @@
             date_utc: "...",
             country: "...",
             us_canada_region: "...",
+            thumbnail_filename: "",
         },
     ]);
     
@@ -142,6 +152,7 @@
                 document.getElementById("dataTableReal").style.display = "block";
                 document.getElementById("dataTableFake").style.display = "none";
                 rows = value;
+                selectedIndex = 0;
             },
             (reason) => {
                 // failure
@@ -153,6 +164,27 @@
 
         
     }
+
+    function viewChange() {
+        console.log("CHANGE");
+        console.log(selectedIndex);
+        if (selectedIndex == 0) {
+            document.getElementById("tableView").style.display = "block";
+            document.getElementById("cardView").style.display = "none";
+        } else if (selectedIndex == 1) {
+            rowsCardView = rows;
+            document.getElementById("tableView").style.display = "none";
+            document.getElementById("cardView").style.display = "block";
+            pageSizeCardView = 10;
+        }
+        
+    }
+
+    let rowsCardView = $state([{}]);
+    let pageCardView = $state(1);
+    let pageSizeCardView = $state(1);
+    let selectedIndex = $state(0);
+
 
 </script>
 
@@ -251,6 +283,14 @@
     <Row>
         <Column>
             <hr style="margin-top: 60px; margin-bottom: 60px;">
+            <ContentSwitcher bind:selectedIndex={selectedIndex} on:change={() => {viewChange()}} style="margin-top: 60px; margin-bottom: 60px;">
+                <Switch text="Table View" />
+                <Switch text="Card View" />
+            </ContentSwitcher>
+        </Column>
+    </Row>
+    <Row id="tableView">
+        <Column>
             <DataTable
                 title="Search results"
                 sortable
@@ -293,6 +333,34 @@
             <DataTableSkeleton id="dataTableFake" style="display: none;" />
         </Column>
     </Row>
+
+    <Row id="cardView" style="text-align: center;">
+        <Pagination totalItems={rows.length} bind:page={pageCardView} bind:pageSize={pageSizeCardView} pageSizeInputDisabled />
+
+        {#each rowsCardView.slice((pageCardView-1)*10, pageCardView*10) as row, i}
+            <div class="cardViewTile">
+                <Tile light on:click={() =>{goto("/urn?pk="+row['pk'])}}>
+                    <ImageLoader
+                        fadeIn
+                        src={sources.meta + "/" + row['thumbnail_filename']}
+                    >
+                        <svelte:fragment slot="loading">
+                            <SkeletonPlaceholder />
+                        </svelte:fragment>
+                        <svelte:fragment slot="error">
+                            <InlineNotification
+                                hideCloseButton
+                                title="Error:"
+                                subtitle="Unable to load thumbnail for QSL Card."
+                            />
+                        </svelte:fragment>
+                    </ImageLoader>
+
+                    <p>{row['pk']} <small>[{row['from_call']} {String(row['date_utc']).replace("Invalid Date", "")}]</small></p>
+                </Tile>    
+            </div>    
+        {/each}
+    </Row>
 </Grid>
 
 <Modal passiveModal preventCloseOnClickOutside bind:open={redirectModal} modalHeading="Initialization" on:open on:close>
@@ -304,5 +372,10 @@
 </Modal>
 
 <style>
-
+    .cardViewTile {
+        max-width: 420px;
+        padding: 20px;
+        display: inline-block;
+        text-align: left;
+    }
 </style>
