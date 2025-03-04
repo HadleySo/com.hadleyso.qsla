@@ -97,7 +97,7 @@
                     searchSuccess();
                     displayCardData = value[0];
                     srcImageLoader = sources.meta + "/" + displayCardData['thumbnail_filename'];
-                    srcFullDocHold = sources.fullDoc + "/" + displayCardData['thumbnail_filename'].replace("pdf-thumbnail.webp", "pdf-archive.pdf")
+                    srcFullDocHold = sources.fullDoc + "/" + displayCardData['archive_filename'];
                 },
                 (reason) => {
                     // failure

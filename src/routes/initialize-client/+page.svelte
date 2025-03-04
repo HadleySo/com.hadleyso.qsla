@@ -184,7 +184,7 @@
         <Column>
             <p class="column-text">
                 The QSL Archive site is a client side application and requires loading 
-                <span style="font-weight:600;">2.3 MB</span> of data to your browser.
+                <span style="font-weight:600;">10 MB</span> of data to your browser.
                 It is not recommended to use this site on mobile devices.
             </p>
             <p class="column-text">
@@ -234,13 +234,13 @@
         />
         <p>
             The QSL Archive site may contain imagery and references associated with Nazi Germany. 
-            These materials are presented for educational and historical purposes only. 
+            These materials are presented for nonprofit, educational, and commentary purposes. 
         </p>
         <p>
             This project, site, and contents are not affiliated with the University of Wisconsin-Madison or the University of Wisconsin system.
         </p>
         <p>
-            Viewer discretion is advised. The content within this collection may be disturbing or triggering to some individuals.
+            Viewer discretion is advised. The content within this collection may be disturbing.
             Content may be incorrectly tagged and labeled.
         </p>
         <br>
