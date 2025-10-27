@@ -2,11 +2,6 @@
 </svelte:head>
 
 <script>
-    // This can be false if you're using a fallback (i.e. SPA mode)
-    export const prerender = true;
-    export const trailingSlash = 'always';
-    export const ssr = false;
-
     import "carbon-components-svelte/css/all.css";
     import {
         Content,
