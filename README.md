@@ -15,15 +15,15 @@ Since the process is manual, there is a delay between scanning in cards and thei
 
 ### Progress
 
-As of February 2025 we scanned in about 3,900 cards, and of those cards about 200 with keyed in metadata. 
-There is an estimated 21,450 cards in the collection.
+As of October 2025 we scanned in all of our cards, and of those cards about 200 with keyed in metadata. 
+There is an estimated 17,617 cards in the collection.
 
 ### Access to Full Resolution
 
 Cards on the website are shown in lower resolution (because data egress fees add up). 
 The full set of high resolution scans is available though an S3 bucket, the bucket is requestor pays so an AWS account is required.
 
-`s3://bars-qsl-requestor-p-tetirxjdzxfqwsggmro5en3nmjyfouse2b-s3alias`
+`s3://bars-qsl-requestor-p-zbea4kqt5t1wxbxtwx8hfhjh7tjwwuse2b-s3alias`
 
 ### Contributing 
 

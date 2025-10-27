@@ -35,9 +35,9 @@
             </p>
             <h2>Progress</h2>
             <p class="column-text">
-                As of February 2025 we scanned in about 3,900 cards, and of
+                As of October 2025 we scanned in all of our cards, and of
                 those cards about 200 with keyed in metadata. There is an
-                estimated 21,450 cards in the collection.
+                estimated 17,617 cards in the collection.
             </p>
             <h2>Access to Full Resolution</h2>
             <p class="column-text">
@@ -48,7 +48,7 @@
             </p>
             <CodeSnippet
                 type="single"
-                code="s3://bars-qsl-requestor-p-tetirxjdzxfqwsggmro5en3nmjyfouse2b-s3alias"
+                code="s3://bars-qsl-requestor-p-zbea4kqt5t1wxbxtwx8hfhjh7tjwwuse2b-s3alias"
             />
         </Column>
     </Row>

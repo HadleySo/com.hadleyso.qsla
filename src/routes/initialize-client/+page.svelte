@@ -233,14 +233,13 @@
             style="margin-bottom: 20px;"
         />
         <p>
-            The QSL Archive site may contain imagery and references associated with Nazi Germany. 
+            The QSL Archive site may contain imagery and references that may be unsuitable for children. 
             These materials are presented for nonprofit, educational, and commentary purposes. 
         </p>
         <p>
             This project, site, and contents are not affiliated with the University of Wisconsin-Madison or the University of Wisconsin system.
         </p>
         <p>
-            Viewer discretion is advised. The content within this collection may be disturbing.
             Content may be incorrectly tagged and labeled.
         </p>
         <br>
