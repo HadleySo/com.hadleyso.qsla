@@ -224,15 +224,26 @@
 <!--  initialize Disclaimer -->
 <ComposedModal bind:open={initializeDisclaimerOpen} on:submit={() => (disclaimerApproved())}>
     <ModalBody hasForm>
-        <InlineNotification
+        <!-- <InlineNotification
             lowContrast
             hideCloseButton
             kind="warning"
             title="Viewer Discretion:"
             subtitle="sensitive content."
             style="margin-bottom: 20px;"
+        /> -->
+        <InlineNotification
+            lowContrast
+            hideCloseButton
+            kind="info"
+            title="Maintenance:"
+            subtitle="We're undergoing maintenance!"
+            style="margin-bottom: 20px;"
         />
         <p>
+            We're undergoing maintenance and should be back in a few days. Content is unavailable until we come back online, apologies for any inconvenience.
+        </p>
+        <!-- <p>
             The QSL Archive site may contain imagery and references that may be unsuitable for children. 
             These materials are presented for nonprofit, educational, and commentary purposes. 
         </p>
@@ -243,12 +254,12 @@
             Content may be incorrectly tagged and labeled.
         </p>
         <br>
-      <Checkbox labelText="I understand" bind:checked={initializeDisclaimerChecked} />
+      <Checkbox labelText="I understand" bind:checked={initializeDisclaimerChecked} /> -->
     </ModalBody>
-    <ModalFooter 
+    <!-- <ModalFooter 
         primaryButtonText="Proceed" 
         primaryButtonDisabled={!initializeDisclaimerChecked} 
-    />
+    /> -->
 </ComposedModal>
 
 <style>
