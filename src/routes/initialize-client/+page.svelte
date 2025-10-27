@@ -184,7 +184,7 @@
         <Column>
             <p class="column-text">
                 The QSL Archive site is a client side application and requires loading 
-                <span style="font-weight:600;">10 MB</span> of data to your browser.
+                <span style="font-weight:600;">19 MB</span> of data to your browser.
                 It is not recommended to use this site on mobile devices.
             </p>
             <p class="column-text">
@@ -224,42 +224,31 @@
 <!--  initialize Disclaimer -->
 <ComposedModal bind:open={initializeDisclaimerOpen} on:submit={() => (disclaimerApproved())}>
     <ModalBody hasForm>
-        <!-- <InlineNotification
-            lowContrast
-            hideCloseButton
-            kind="warning"
-            title="Viewer Discretion:"
-            subtitle="sensitive content."
-            style="margin-bottom: 20px;"
-        /> -->
         <InlineNotification
             lowContrast
             hideCloseButton
-            kind="info"
-            title="Maintenance:"
-            subtitle="We're undergoing maintenance!"
+            kind="warning"
+            title="Mislabeling & Viewer Discretion"
             style="margin-bottom: 20px;"
         />
         <p>
-            We're undergoing maintenance and should be back in a few days. Content is unavailable until we come back online, apologies for any inconvenience.
+            QSL Cards may be copyright by their creator(s) in their respective countries. Metadata provided may be incorrect, missing, or inaccurate and should not be used to determine copyright.
+            Content may be incorrectly tagged and labeled.
         </p>
-        <!-- <p>
+        <p>
             The QSL Archive site may contain imagery and references that may be unsuitable for children. 
             These materials are presented for nonprofit, educational, and commentary purposes. 
         </p>
         <p>
             This project, site, and contents are not affiliated with the University of Wisconsin-Madison or the University of Wisconsin system.
         </p>
-        <p>
-            Content may be incorrectly tagged and labeled.
-        </p>
         <br>
-      <Checkbox labelText="I understand" bind:checked={initializeDisclaimerChecked} /> -->
+      <Checkbox labelText="I understand" bind:checked={initializeDisclaimerChecked} />
     </ModalBody>
-    <!-- <ModalFooter 
+    <ModalFooter 
         primaryButtonText="Proceed" 
         primaryButtonDisabled={!initializeDisclaimerChecked} 
-    /> -->
+    />
 </ComposedModal>
 
 <style>

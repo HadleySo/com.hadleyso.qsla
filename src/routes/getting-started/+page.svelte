@@ -112,7 +112,7 @@
                         <StructuredListCell>Multiselect</StructuredListCell>
                         <StructuredListCell>
                             Country of operator. Lists all countries that existed that could have
-                            had HAM radio operators.
+                            had HAM radio operators. [1]
                         </StructuredListCell>
                     </StructuredListRow>
                     <StructuredListRow>
@@ -140,6 +140,20 @@
                     </StructuredListRow>
                 </StructuredListBody>
             </StructuredList>
+        </Column>
+    </Row>
+    <Row>
+        <Column style="padding-top: 40px;">
+            <h3>Notes and Amendments:</h3>
+        </Column>
+    </Row>
+    <Row>
+        <Column style="padding-top: 40px;">
+            <ol>
+                <li>
+                    [1] Czechoslovakia uses the ISO code CS (CS, CSK, 200), see also CSHH.
+                </li>
+            </ol>
         </Column>
     </Row>
 </Grid>

@@ -96,8 +96,8 @@
                     console.info(`getCardPromise done in reMountRender(): ${value[0]}`);
                     searchSuccess();
                     displayCardData = value[0];
-                    srcImageLoader = sources.meta + "/" + displayCardData['thumbnail_filename'];
-                    srcFullDocHold = sources.fullDoc + "/" + displayCardData['archive_filename'];
+                    srcImageLoader = sources.meta + "/thumbnail/" + displayCardData['thumbnail_filename'];
+                    srcFullDocHold = sources.fullDoc + "/reduced-full/" + displayCardData['archive_filename'];
                 },
                 (reason) => {
                     // failure
