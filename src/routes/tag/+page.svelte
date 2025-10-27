@@ -162,7 +162,9 @@
                     pageSizeInputDisabled
                 />
                 <svelte:fragment slot="expanded-row" let:row>
-                    <pre>{JSON.stringify(row, null, 2)}</pre>
+                    <div style="max-width: 80vw; overflow-x: auto; white-space: nowrap;">
+                        <pre>{JSON.stringify(row, null, 2)}</pre>
+                    </div>
                 </svelte:fragment>
                 <svelte:fragment slot="cell" let:row let:cell>
                     {#if cell.key === "pk" && cell.value !== "..."}
