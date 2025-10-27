@@ -24,7 +24,7 @@
         <Column>
             <h1 style="padding-bottom: 40px;">QSL Card Archive</h1>
             <p class="column-text" style="font-size: 20px; font-weight: 400;">
-                The QSL Card Archive is one of my projects, archiving, preserving, and documenting the 21,000 plus 
+                The QSL Card Archive is a project archiving, preserving, and documenting the 17,000 plus 
                  QSL cards received by UW-Madison's Badger Amateur Radio Society over the past 60
                  years from around the world.
             </p>
@@ -76,7 +76,7 @@
                     </TabContent>
                     <TabContent>
                         <p class="column-text">
-                            Visit our getting started page for metatdata:
+                            Visit our info page for metatdata:
                         </p>
                         <Button kind="tertiary"><a href="/getting-started" class="nested-link">Metadata Info</a></Button>
                     </TabContent>
