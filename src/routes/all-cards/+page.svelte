@@ -1,18 +1,11 @@
 <svelte:head>
-    <title>Search | QSL Card Archive | Hadley So</title>
+    <title>View All Cards | QSL Card Archive | Hadley So</title>
 </svelte:head>
 <script>
     import {
-        Button,
         Grid,
         Row,
         Column,
-        Form,
-        FormGroup,
-        MultiSelect,
-        TextInput,
-        DatePicker,
-        DatePickerInput,
         Modal,
         InlineLoading,
         ProgressBar,
@@ -29,7 +22,9 @@
         Tile,
         ContentSwitcher,
         Switch,
-        SkeletonPlaceholder
+        SkeletonPlaceholder,
+        Button,
+
     } from "carbon-components-svelte";
     import {
         goto
@@ -37,48 +32,22 @@
     import { browser } from '$app/environment';
     import sources from '$lib/metadata-config/sources.json';
 
-	let { data } = $props();
-
-    import { searchFormWrap } from '$lib/search.js'
+    import { getAllCards } from '$lib/search.js'
     import { getCookie } from "$lib/cookie.js";
-    import { Launch, SearchAdvanced } from "carbon-icons-svelte";
-
-    let from_call = $state("");
-    let to_call = $state("");
-    let frequency = $state("");
-    let rst = $state("");
-    let freeContent = $state("");
-    /**
-     * @type {never[]}
-     */
-    let country = $state([]);
-    /**
-     * @type {never[]}
-     */
-    let mode = $state([]);
-    /**
-     * @type {never[]}
-     */
-    let us_canada_region = $state([]);
-    /**
-     * @type {never[]}
-     */
-    let ussr_region = $state([]);
-    let date_utc_start = $state("");
-    let date_utc_end = $state("");
+    import { Launch } from "carbon-icons-svelte";
 
 
     let redirectModal = $state(false);
     if (browser) {
         if (getCookie(document.cookie, "qslArchiveDataSet") == null) {
             redirectModal = true;
-            setTimeout(() => goto("/initialize-client?origin=%2Fsearch"), 5000)
-        }
+            setTimeout(() => goto("/initialize-client?origin=%2Fall-cards"), 5000)
+        } 
     }
 
 
     let step02ProgressBar = $state("active");
-    let step02ProgressBarLabel = $state("Searching...");
+    let step02ProgressBarLabel = $state("Loading...");
     let pageSize = $state(15);
     let page = $state(1);
     let rows = $state([
@@ -124,10 +93,20 @@
         },
     ]);
     
-    function searchSubmit() {
+    function loadButtonWrap() {
+        loadedAnyData = true;
+        searchSubmit(0);
+        document.getElementById("loadButton").style.display = "none";
+        document.getElementById("sectionSelector").style.display = "block";
+    }
+
+    
+    /**
+     * @param {number} pgNumber
+     */
+    function searchSubmit(pgNumber) {
 
         // Show loading bar
-        document.getElementById("step01").style.display = "none";
         document.getElementById("step02").style.display = "block";
         document.getElementById("dataTableReal").style.display = "none";
         document.getElementById("dataTableFake").style.display = "block";
@@ -135,7 +114,7 @@
         // Send new promise
         const searchPromise = new Promise((resolve, reject) => {
             try{
-                resolve(searchFormWrap(from_call, to_call, frequency, rst, freeContent, country, mode, us_canada_region, ussr_region, date_utc_start, date_utc_end));
+                resolve(getAllCards(pgNumber, pageSize*50));
             }
             catch (e) {
                 reject(e);
@@ -147,12 +126,13 @@
             (value) => {
                 // success
                 console.log(`searchPromise done ${value}`);
-                document.getElementById("step01").style.display = "block";
                 document.getElementById("step02").style.display = "none";
                 document.getElementById("dataTableReal").style.display = "block";
                 document.getElementById("dataTableFake").style.display = "none";
                 rows = value;
-                selectedIndex = 0;
+                if (pgNumber == 0) {
+                    selectedIndex = 1;
+                }
             },
             (reason) => {
                 // failure
@@ -175,15 +155,30 @@
             rowsCardView = rows;
             document.getElementById("tableView").style.display = "none";
             document.getElementById("cardView").style.display = "block";
-            pageSizeCardView = 10;
         }
         
     }
 
+    function allPkPageDown() {
+        allPkPage = allPkPage - 1;
+        searchSubmit(allPkPage);
+        page = 1;
+        pageCardView = 1;
+    }
+
+    function allPkPageUp() {
+        allPkPage = allPkPage + 1;
+        searchSubmit(allPkPage);
+        page = 1;
+        pageCardView = 1;
+    }
+
     let rowsCardView = $state([{}]);
     let pageCardView = $state(1);
-    let pageSizeCardView = $state(1);
+    let pageSizeCardView = $state(15);
     let selectedIndex = $state(0);
+    let allPkPage = $state(0);
+    let loadedAnyData = $state(false);
 
 
 </script>
@@ -191,91 +186,26 @@
 <Grid>
     <Row>
         <Column>
-            <h1 style="padding-bottom: 30px;">Search</h1>
-            <p style="padding-bottom: 40px;">
-                Please note that <span style="font-weight: 700;">less than 3%</span> of cards are searchable, most cards do not have metadata.
+            <h1 style="padding-bottom: 40px;">View All Cards</h1>
+            <p id="loadButton">
+                Click the button below to load cards: <br><br>
+                <Button  on:click={loadButtonWrap}>Load all cards</Button>
             </p>
-        </Column>
-    </Row>
-    <Row>
-        <Column>
-            <Form
-                method="POST"
-                onsubmit={(e) => {
-                    e.preventDefault();
-                    searchSubmit();
-                }}
-              >
-                <Row>
-                    <Column>
-                        <TextInput style="margin-bottom:40px;" labelText="From Call Sign" placeholder="Call sign..." id="from_call" name="from_call" bind:value={from_call}></TextInput>
-                        <TextInput style="margin-bottom:40px;" labelText="To Call Sign" placeholder="Call sign..." id="to_call" name="to_call" bind:value={to_call}></TextInput>       
-                        
-                        <FormGroup legendText="Date of Contact - Range" style="margin-top: 40px;">
-                            <DatePicker datePickerType="range" on:change bind:valueFrom={date_utc_start} bind:valueTo={date_utc_end}>
-                                <DatePickerInput labelText="Start" placeholder="mm/dd/yyyy" id="date_utc_start" name="date_utc_start" />
-                                <DatePickerInput labelText="End" placeholder="mm/dd/yyyy" id="date_utc_end" name="date_utc_end" />
-                            </DatePicker>
-                        </FormGroup>
- 
-                    </Column>
+            <div style="display: none;" id="sectionSelector">
+                <h4>
+                    On section {allPkPage}
+                </h4>
+                <div style="padding: 10px;">
+                    <Button kind={"tertiary"} on:click={allPkPageDown} disabled={allPkPage === 0}>Section Down (to {allPkPage  - 1})</Button>
+                    <Button kind={"tertiary"} on:click={allPkPageUp}>Section Up (to {allPkPage + 1})</Button>
+                </div>
+                <br><br>
+                <p>
+                    Each section has 750 cards, use the page arrows on the top right of the table heading below to page though. <br>
+                    To load a new section use the buttons above.
+                </p>
+            </div>
 
-                    <Column>
-                        <TextInput style="margin-bottom:40px;" labelText="Frequency" placeholder="Frequency..." id="frequency" name="frequency" bind:value={frequency}></TextInput>
-                        <TextInput style="margin-bottom:40px;" labelText="RST" placeholder="RST..." id="rst" name="rst" bind:value={rst}></TextInput>
-
-        
-                    </Column>
-                
-                </Row>
-
-                <Row style="margin-top: 40px;">
-
-                    <Column>
-                        <MultiSelect   
-                            titleText="Countries (Current and Former)"
-                            filterable
-                            items={data.countries.countries}
-                            name="country"
-                            bind:selectedIds={country}
-                        />
-                        <br style="margin-top:15px;">
-                        <MultiSelect
-                            titleText="US States / Canadian Provinces"
-                            filterable
-                            items={data.us_can_region.us_can_region}
-                            name="us_canada_region"
-                            bind:selectedIds={us_canada_region}
-                            direction="top"
-                        />
-                        <br style="margin-top:15px;">
-                        <MultiSelect
-                            titleText="Union Republics, Allied, and Satellite States (USSR) "
-                            filterable
-                            items={data.ussr_region.usssr_region}
-                            name="ussr_region"
-                            bind:selectedIds={ussr_region}
-                            direction="top"
-                        />
-
-
-                    </Column>
-                    <Column>
-                        <MultiSelect
-                            titleText="Modes"
-                            filterable
-                            items={data.mode.mode}
-                            name="mode"
-                            bind:selectedIds={mode}
-                        />
-
-                    </Column>
-                </Row>
-
-                <br style="margin-top: 40px;">
-
-                <Button type="submit" id="step01" icon={SearchAdvanced}>Search</Button>
-            </Form>
         </Column>
     </Row>
     <Row id="step02" style="display: none;">
@@ -285,10 +215,9 @@
     </Row>
     <Row>
         <Column>
-            <hr style="margin-top: 60px; margin-bottom: 60px;">
             <ContentSwitcher bind:selectedIndex={selectedIndex} on:change={() => {viewChange()}} style="margin-top: 60px; margin-bottom: 60px;">
                 <Switch text="Table View" />
-                <Switch text="Card View" />
+                <Switch text="Card View" disabled={!loadedAnyData}/>
             </ContentSwitcher>
         </Column>
     </Row>
@@ -326,7 +255,7 @@
                     {#if cell.key === "pk" && cell.value !== "..."}
                       <Link
                         icon={Launch}
-                        href="/urn?pk={cell.value}">{cell.value}
+                        href="/urn?pk={cell.value}" target="_blank">{cell.value}
                     </Link>
                     {:else}
                       {cell.value}
@@ -352,25 +281,27 @@
                     </div>  
             {:else}
                 <div class="cardViewTile">
-                    <Tile light on:click={() =>{goto("/urn?pk="+row['pk'])}}>
-                        <ImageLoader
-                            fadeIn
-                            src={sources.meta + "/" + row['thumbnail_filename']}
-                        >
-                            <svelte:fragment slot="loading">
-                                <SkeletonPlaceholder />
-                            </svelte:fragment>
-                            <svelte:fragment slot="error">
-                                <InlineNotification
-                                    hideCloseButton
-                                    title="Error:"
-                                    subtitle="Unable to load thumbnail for QSL Card."
-                                />
-                            </svelte:fragment>
-                        </ImageLoader>
+                    <Link href="/urn?pk={row['pk']}" target="_blank">
+                        <Tile light>
+                            <ImageLoader
+                                fadeIn
+                                src={sources.meta + "/" + row['thumbnail_filename']}
+                            >
+                                <svelte:fragment slot="loading">
+                                    <SkeletonPlaceholder />
+                                </svelte:fragment>
+                                <svelte:fragment slot="error">
+                                    <InlineNotification
+                                        hideCloseButton
+                                        title="Error:"
+                                        subtitle="Unable to load thumbnail for QSL Card."
+                                    />
+                                </svelte:fragment>
+                            </ImageLoader>
 
-                        <p>{row['pk']} <small>[{row['from_call']} {String(row['date_utc']).replace("Invalid Date", "")}]</small></p>
-                    </Tile>    
+                            <p>{row['pk']} <small>[{row['from_call']} {String(row['date_utc']).replace("Invalid Date", "")}]</small></p>
+                        </Tile> &emsp13;
+                    </Link>
                 </div>    
             {/if}
         {/each}
@@ -391,5 +322,11 @@
         padding: 20px;
         display: inline-block;
         text-align: left;
+    }
+    /* Global selectors to override Carbon styles inside Svelte */
+    :global(.bx--link:hover) {
+        text-decoration: none;
+        box-shadow: none;      /* some inline variants use a shadow underline */
+        border-bottom: none;   /* ensure any border-based underline is removed */
     }
 </style>

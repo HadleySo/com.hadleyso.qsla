@@ -16,7 +16,7 @@
     import {
         goto
     } from '$app/navigation';
-    import { SearchAdvanced, NotebookReference, Launch } from "carbon-icons-svelte";
+    import { SearchAdvanced, NotebookReference, Launch, DocumentMultiple_01} from "carbon-icons-svelte";
 </script>
 
 <Grid>
@@ -36,8 +36,9 @@
     <Row>
         <Column style="padding-top: 60px;">     
             <ButtonSet>
-                <Button kind="primary" on:click={() => {goto("/search")}} icon={SearchAdvanced}>Search</Button>
-                <Button kind="secondary" on:click={() => {goto("/getting-started")}}>Explore QSL Cards</Button>
+                <Button kind="primary" on:click={() => {goto("/all-cards")}} icon={DocumentMultiple_01}>View All Cards</Button>
+                <Button kind="secondary" on:click={() => {goto("/search")}} icon={SearchAdvanced}>Search</Button>
+                <!-- <Button kind="secondary" on:click={() => {goto("/getting-started")}}>Explore QSL Cards</Button> -->
                 <Button kind="secondary" on:click={() => {goto("/cite")}} icon={NotebookReference}>Credit / Cite this</Button>
             </ButtonSet>
 

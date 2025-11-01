@@ -282,7 +282,7 @@ export async function searchFormWrap(from_call, to_call, frequency, rst, freeCon
 /**
  * Takes in array primary keys and returns full info.
  *
- *  * @param {Array<any} pks
+ *  * @param {Array<any>} pks
  */
 export async function multiURN(pks) {
 
@@ -529,6 +529,138 @@ export async function searchTag(tag) {
                         cursor.continue();
                     } 
                 };
+        
+    
+            };
+    
+    
+    
+        } catch(e) {
+            console.error(e);
+            reject(`IndexedDb unable to load data - ${e}`);
+            throw new Error('IndexedDb unable to load data');
+        }
+    
+    });
+}
+
+/**
+ * Wrapper to get all cards
+ * 
+ * @param {Number} [page]
+ * @param {Number} [size]
+ */
+export async function getAllCards(page, size) {
+    console.debug(`getAllCards started`);
+
+    const value = await allReversePK(page, size);
+    console.log(`getAllCards() done running allReversePK(): ${value}`)
+    let cardData =  multiURN(value);
+    return cardData;
+    
+}
+
+/**
+ * Get all pk from largest to smallest
+ * 
+ * @param {Number} [page]
+ * @param {Number} [size]
+ */
+export async function allReversePK(page, size) {
+    /**
+     * @type {any[][]}
+     */
+    var searchKeyResults = [];
+    
+    const skip = (page - 1) * size;
+    let skipped = 0;      // how many items we have already skipped
+    let fetched  = 0;     // how many items we have collected
+
+    return new Promise(function(resolve, reject) {
+        try {
+            // Request DB
+            const request = window.indexedDB.open(sources.dbName, sources.dbVersion);
+            
+            // Handle errors
+            request.onerror = (event) => {
+                // @ts-ignore
+                console.error(`Unable to load IndexedDB - error: ${event.target.error?.message}`);
+                reject("Unable to load IndexedDB with event");
+                throw new Error('Unable to load IndexedDB with event');
+            };
+    
+            // Handle upgrade event
+            request.onupgradeneeded =  function(event) {
+                console.error(`Unable to load IndexedDB - UPGRADE needed`);
+                reject("Unable to load IndexedDB - UPGRADE needed");
+                throw new Error('Unable to load IndexedDB - UPGRADE needed');
+            };
+    
+            request.onsuccess = (event) => {
+                // @ts-ignore
+                const db = event.target.result;
+    
+    
+                const transaction = db.transaction(["qslCardMeta"], "readonly");
+                const objectStore = transaction.objectStore("qslCardMeta");
+
+                // CHECK THAT DB HAS CONTENT
+                var count = objectStore.count();
+                count.onsuccess = function() {
+                    console.log(`IndexedDB row count: ${count.result}`);
+                    if (count.result < 3000) {
+                        goto("/initialize-client?reset")
+                    }
+                }
+    
+                // CATCH PROMISE WHEN TRANSACTION DONE
+                transaction.addEventListener("complete", (event) => {
+                    console.info(`allReversePK transaction was completed ${searchKeyResults} ${event}`);
+                    resolve([searchKeyResults]);
+                });
+                
+
+                // OPEN CURSOR
+                const cursorRequest = objectStore.openKeyCursor(undefined, 'prev'); // undefined = no key‑range => all entries
+
+                cursorRequest.onerror = (err) => {
+                    console.error(`Cursor error: ${err.target.error?.message}`);
+                    reject(`Cursor error: ${err.target.error?.message}`);
+                };
+
+                cursorRequest.onsuccess = (ev) => {
+                    const cursor = ev.target.result;
+
+                        // End of store – we hit the last page
+                        if (!cursor) {
+                            resolve([searchKeyResults]);
+                            return;
+                        }
+
+                        // If we still need to skip items, use advance() – it skips n steps in the
+                        // current direction and triggers another onsuccess callback.
+                        if (skipped < skip) {
+                            const remainingToSkip = skip - skipped;
+                            cursor.advance(remainingToSkip);
+                            skipped = skip;          // we are done skipping
+                            return;                  // wait for the next onsuccess event
+                        }
+
+                        // --- Collect the key ---
+                        console.info(`allReversePK adding key ${cursor.primaryKey}`);
+                        searchKeyResults.push(cursor.primaryKey);
+                        fetched++;
+
+                        // We have enough items for the page – stop iterating
+                        if (fetched >= size) {
+                            resolve(searchKeyResults);
+                            return;
+                        }
+
+                        // Continue walking the store
+                        cursor.continue();
+                };
+
         
     
             };

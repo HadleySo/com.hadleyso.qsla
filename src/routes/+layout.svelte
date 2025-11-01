@@ -40,6 +40,7 @@
     </svelte:fragment>
     <HeaderNav>
         <HeaderNavItem href="/" text="/" />
+        <HeaderNavItem href="/all-cards" text="View Cards" />
         <HeaderNavItem href="/search" text="Metadata Search" />
         <HeaderNavItem href="/urn" text="Retrieve URN" />
         <HeaderNavItem href="/tags" text="Tags" />
@@ -80,6 +81,7 @@
 <SideNav bind:isOpen={isSideNavOpen}>
     <SideNavItems>
         <SideNavMenuItem href="/" text="Home" on:click={() => {isSideNavOpen=false}} />
+        <SideNavMenuItem href="/all-cards" text="View Cards" on:click={() => {isSideNavOpen=false}} />
         <SideNavMenuItem href="/search" text="Metadata Search" on:click={() => {isSideNavOpen=false}} />
         <SideNavMenuItem href="/urn" text="Retrieve URN" on:click={() => {isSideNavOpen=false}} />
         <SideNavMenuItem href="/tags" text="Tags" on:click={() => {isSideNavOpen=false}} />
