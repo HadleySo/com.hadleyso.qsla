@@ -285,7 +285,7 @@
                         <Tile light>
                             <ImageLoader
                                 fadeIn
-                                src={sources.meta + "/" + row['thumbnail_filename']}
+                                src={sources.meta + "/thumbnails/" + row['thumbnail_filename']}
                             >
                                 <svelte:fragment slot="loading">
                                     <SkeletonPlaceholder />

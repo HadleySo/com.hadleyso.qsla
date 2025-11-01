@@ -355,7 +355,7 @@
                     <Tile light on:click={() =>{goto("/urn?pk="+row['pk'])}}>
                         <ImageLoader
                             fadeIn
-                            src={sources.meta + "/" + row['thumbnail_filename']}
+                            src={sources.meta + "/thumbnails/" + row['thumbnail_filename']}
                         >
                             <svelte:fragment slot="loading">
                                 <SkeletonPlaceholder />
