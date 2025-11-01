@@ -12,7 +12,9 @@
         InlineLoading,
         InlineNotification,
         ImageLoader,
-        CodeSnippet
+        CodeSnippet,
+        Link
+
     } from "carbon-components-svelte";
     import { browser } from '$app/environment';
     import { getCookie } from "$lib/cookie.js";
@@ -242,7 +244,7 @@
             </p>
         </Column>
         <Column>
-            <Button
+            <!-- <Button
                 kind="ghost"
                 on:click={() => {
                     document.getElementById("imageThumbnail").style.display="none";
@@ -253,7 +255,7 @@
                 id="loadFullButton"
             >
                 Load full QSL Card
-            </Button>
+            </Button> -->
             
             <div style="height: fit-content;" id="imageThumbnail">
                 <ImageLoader
@@ -289,26 +291,46 @@
                 <small>
                     <span style="font-weight: 500;">Full resolution - S3 URI (Requestor Pay Fee):</span> <br>
                 </small>
-                <CodeSnippet
-                        code="{sources.s3}/{displayCardData['archive_filename']}"
-                    />
+                <div style="padding-top: 10px; padding-bottom: 10px;">
+                    <CodeSnippet
+                            code="{sources.s3}/{displayCardData['archive_filename']}"
+                        />
+                </div>  
+                <br><br>
+                <small>
+                    <span style="font-weight: 500;">Full resolution mirror:</span> <br>
+                </small>
+                <div style="padding-top: 10px; padding-bottom: 10px;">
+                    <Link href="https://pages.cs.wisc.edu/~hs/bars-qsl/archive/{displayCardData['archive_filename']}" target="_blank">
+                        <CodeSnippet type="single"
+                                code="https://pages.cs.wisc.edu/~hs/bars-qsl/archive/{displayCardData['archive_filename']}" hideCopyButton={true}
+                            />
+                    </Link>
+                </div>
+                <div style="padding-top: 10px; padding-bottom: 10px;">
+                    <Link href="https://archive.org/details/com.hadleyso.qsla-URN{displayCardData['pk']}" target="_blank">
+                        <CodeSnippet type="single"
+                                code="https://archive.org/details/com.hadleyso.qsla-URN{displayCardData['pk']}" hideCopyButton={true}
+                            />
+                    </Link>
+                </div>
                 <h3 style="padding-top: 40px;">Reference URN {displayCardData['pk']}</h3>
                 <p class="column-text">
                     MLA
                 </p>
-                <CodeSnippet type="single" 
+                <CodeSnippet type="multi" wrapText={true} 
                     code="So, Hadley, et al. card number/URN {displayCardData['pk']}. QSL Card Archive. 2025. QSL Card Archive of University of Wisconsin-Madison Badger Amateur Radio Society, Collection. https://qsla.hadleyso.com/urn?pk={displayCardData['pk']}. "
                 />
                 <p class="column-text">
                     CHICAGO
                 </p>
-                <CodeSnippet type="single" 
+                <CodeSnippet type="multi" wrapText={true} 
                     code='So, Hadley, Skylar Culek, and Nicholas Winer. "QSL Card Archive." Collection, QSL Card Archive of University of Wisconsin-Madison Badger Amateur Radio Society, card number/URN {displayCardData['pk']}. 2025.'
                 />
                 <p class="column-text">
                     APA
                 </p>
-                <CodeSnippet type="single" 
+                <CodeSnippet type="multi" wrapText={true} 
                     code="So, H., Culek, S., & Winer, N. (2025). QSL Card Archive [Collection]. QSL Card Archive of University of Wisconsin-Madison Badger Amateur Radio Society. card number/URN {displayCardData['pk']}. https://qsla.hadleyso.com/urn?pk={displayCardData['pk']} "
                 />
             </div>
