@@ -201,7 +201,7 @@
                 </div>
                 <br><br>
                 <p>
-                    Each section has 750 cards, use the page arrows on the top right of the table heading below to page though. <br>
+                    Each section has 750 cards, use the page arrows on the top right of the table heading below to page through. <br>
                     To load a new section use the buttons above.
                 </p>
             </div>
